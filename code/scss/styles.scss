@@ -1,0 +1,81 @@
+//RESETS etc//
+//////////////
+body{
+	font-size: 100%;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+#showcase{
+	width:70%;
+	height: 200px;
+	background: #ddd;
+}
+
+.itemGrid--top{
+	margin: 0 auto;
+	background: #ccc;
+	font-size: 0;
+
+		&__item{
+			display: inline-block;
+			width: 18.18%;
+			padding: 0 9.09% 0 0;
+
+			img{
+				width: 100%;
+			}
+		}
+
+		&__item--last{
+			display: inline-block;
+			width: 18.18%;
+			padding: 0;
+
+			img{
+				width: 100%;
+			}
+		}
+}
+
+
+
+.itemGrid--bottom{
+	margin: 0 auto;
+	background: #333;
+	font-size: 0;
+
+		&__item--first{
+			display: inline-block;			
+			width: 18.18%;
+			padding: 0 9.09% 0 13.635%;
+
+			img{
+				width: 100%;
+			}
+		}
+
+		&__item--mid{
+			display: inline-block;			
+			width: 18.18%;
+			padding: 0 9.09% 0 0;
+
+			img{
+				width: 100%;
+			}
+		}
+
+		&__item--last{
+			display: inline-block;			
+			width: 18.18%;
+			padding: 0 13.635% 0 0;
+
+			img{
+				width: 100%;
+			}
+		}
+}
