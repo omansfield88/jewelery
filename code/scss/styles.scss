@@ -2,80 +2,172 @@
 //////////////
 body{
 	font-size: 100%;
+	background-color: #000;
 }
 *{
 	margin: 0;
 	padding: 0;
 }
+body, html{
+	height: 100%;
+}
+
+
+
+#intro{
+	background: url("../img/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+		h1{
+			font-family: 'Playfair Display', serif;
+			color: #fff;
+			font-size: 70px;
+		}
+}
+
+
+
 
 
 
 #showcase{
-	width:70%;
-	height: 200px;
-	background: #ddd;
+	width:100%;
+	background: #000;
+	margin: 100px 0 100px 0;
 }
 
 .itemGrid--top{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	background: #000;
 	margin: 0 auto;
-	background: #ccc;
-	font-size: 0;
+	padding: 0 0 50px 0;
 
-		&__item{
-			display: inline-block;
-			width: 18.18%;
-			padding: 0 9.09% 0 0;
-
-			img{
-				width: 100%;
-			}
-		}
-
-		&__item--last{
-			display: inline-block;
-			width: 18.18%;
-			padding: 0;
+		&__item{			
+			width: 200px;
 
 			img{
 				width: 100%;
 			}
 		}
 }
-
-
 
 .itemGrid--bottom{
+	display: flex;
+	justify-content: space-around;
+	max-width: 1200px;
+	background: #000;
 	margin: 0 auto;
-	background: #333;
-	font-size: 0;
 
-		&__item--first{
-			display: inline-block;			
-			width: 18.18%;
-			padding: 0 9.09% 0 13.635%;
+		&__item{			
+			width: 200px;			
 
 			img{
 				width: 100%;
 			}
 		}
 
-		&__item--mid{
-			display: inline-block;			
-			width: 18.18%;
-			padding: 0 9.09% 0 0;
+		&__item--first{			
+			width: 200px;
+			padding: 0 0 0 100px;			
 
 			img{
 				width: 100%;
 			}
 		}
 
-		&__item--last{
-			display: inline-block;			
-			width: 18.18%;
-			padding: 0 13.635% 0 0;
+		&__item--last{			
+			width: 200px;
+			padding: 0 100px 0 0;			
 
 			img{
 				width: 100%;
 			}
 		}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//Percentage layout, everything scales down equally.
+
+// .itemGrid--top{
+// 	margin: 0 auto;
+// 	font-size: 0;
+// 	max-width: 1000px;
+
+// 		&__item{
+// 			display: inline-block;
+// 			width: 18.18%;
+// 			padding: 0 9.09% 0 0;
+
+// 			img{
+// 				width: 100%;
+// 			}
+// 		}
+
+// 		&__item--last{
+// 			display: inline-block;
+// 			width: 18.18%;
+// 			padding: 0;
+
+// 			img{
+// 				width: 100%;
+// 			}
+// 		}
+// }
+
+
+
+// .itemGrid--bottom{
+// 	margin: 0 auto;
+// 	background: #333;
+// 	font-size: 0;
+// 	max-width: 1000px;
+
+// 		&__item--first{
+// 			display: inline-block;			
+// 			width: 18.18%;
+// 			padding: 0 9.09% 0 13.635%;
+
+// 			img{
+// 				width: 100%;
+// 			}
+// 		}
+
+// 		&__item--mid{
+// 			display: inline-block;			
+// 			width: 18.18%;
+// 			padding: 0 9.09% 0 0;
+
+// 			img{
+// 				width: 100%;
+// 			}
+// 		}
+
+// 		&__item--last{
+// 			display: inline-block;			
+// 			width: 18.18%;
+// 			padding: 0 13.635% 0 0;
+
+// 			img{
+// 				width: 100%;
+// 			}
+// 		}
+// }

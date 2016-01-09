@@ -1,52 +1,64 @@
 body {
-  font-size: 100%; }
+  font-size: 100%;
+  background-color: #000; }
 
 * {
   margin: 0;
   padding: 0; }
 
+body, html {
+  height: 100%; }
+
+#intro {
+  background: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #intro h1 {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 70px; }
+
 #showcase {
-  width: 70%;
-  height: 200px;
-  background: #ddd; }
+  width: 100%;
+  background: #000;
+  margin: 100px 0 100px 0; }
 
 .itemGrid--top {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  background: #000;
   margin: 0 auto;
-  background: #ccc;
-  font-size: 0; }
+  padding: 0 0 50px 0; }
   .itemGrid--top__item {
-    display: inline-block;
-    width: 18.18%;
-    padding: 0 9.09% 0 0; }
+    width: 200px; }
     .itemGrid--top__item img {
-      width: 100%; }
-  .itemGrid--top__item--last {
-    display: inline-block;
-    width: 18.18%;
-    padding: 0; }
-    .itemGrid--top__item--last img {
       width: 100%; }
 
 .itemGrid--bottom {
-  margin: 0 auto;
-  background: #333;
-  font-size: 0; }
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  background: #000;
+  margin: 0 auto; }
+  .itemGrid--bottom__item {
+    width: 200px; }
+    .itemGrid--bottom__item img {
+      width: 100%; }
   .itemGrid--bottom__item--first {
-    display: inline-block;
-    width: 18.18%;
-    padding: 0 9.09% 0 13.635%; }
+    width: 200px;
+    padding: 0 0 0 100px; }
     .itemGrid--bottom__item--first img {
       width: 100%; }
-  .itemGrid--bottom__item--mid {
-    display: inline-block;
-    width: 18.18%;
-    padding: 0 9.09% 0 0; }
-    .itemGrid--bottom__item--mid img {
-      width: 100%; }
   .itemGrid--bottom__item--last {
-    display: inline-block;
-    width: 18.18%;
-    padding: 0 13.635% 0 0; }
+    width: 200px;
+    padding: 0 100px 0 0; }
     .itemGrid--bottom__item--last img {
       width: 100%; }
 
