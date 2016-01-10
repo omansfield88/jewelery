@@ -14,7 +14,7 @@ body, html{
 
 
 
-#intro{
+.intro{
 	background: url("../img/bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -37,10 +37,104 @@ body, html{
 
 
 
-#showcase{
-	width:100%;
+.showcase{
+	background: url("../img/velvet.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	max-width: 1200px;
 	background: #000;
-	margin: 100px 0 100px 0;
+	margin: 50px auto 100px auto;
+	padding: 50px;
+
+		&__firstRow{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			// background: red;
+
+			&__image{
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;		
+
+				img{
+					margin: 0 auto;
+					width: 50%;
+					height: 50%;
+				}
+			}//__image
+
+			&__textBox{
+				width: 50%;
+				vertical-align: top;
+				h2{
+					font-family: 'Playfair Display', serif;
+					color: #fff;
+					font-size: 150px;
+					margin: 0 auto;
+				}
+				p{
+					font-family: 'Playfair Display', serif;
+					color: #fff;
+					font-size: 25px;
+				}
+			}				
+		}//__firstRow
+
+		&__secondRow{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			// background: #ccc;
+			margin: 150px 0 0 0;
+			
+			&__finger{
+				width: 50%;
+				display: flex;
+				justify-content: center;
+
+				img{
+					height: 80%;
+				}
+			}
+
+
+			&__girl{
+				width: 50%;
+				display: flex;
+				justify-content: center;		
+
+				img{
+					margin: 0 auto;
+					width: 100%;
+					height: 100%;
+				}
+			}					
+		}//__secondRow
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.products{
+	margin: 200px 0;
 }
 
 .itemGrid--top{

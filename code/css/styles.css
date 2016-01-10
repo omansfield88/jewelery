@@ -9,7 +9,7 @@ body {
 body, html {
   height: 100%; }
 
-#intro {
+.intro {
   background: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,15 +19,68 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center; }
-  #intro h1 {
+  .intro h1 {
     font-family: 'Playfair Display', serif;
     color: #fff;
     font-size: 70px; }
 
-#showcase {
-  width: 100%;
+.showcase {
+  background: url("../img/velvet.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  max-width: 1200px;
   background: #000;
-  margin: 100px 0 100px 0; }
+  margin: 50px auto 100px auto;
+  padding: 50px; }
+  .showcase__firstRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .showcase__firstRow__image {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .showcase__firstRow__image img {
+        margin: 0 auto;
+        width: 50%;
+        height: 50%; }
+    .showcase__firstRow__textBox {
+      width: 50%;
+      vertical-align: top; }
+      .showcase__firstRow__textBox h2 {
+        font-family: 'Playfair Display', serif;
+        color: #fff;
+        font-size: 150px;
+        margin: 0 auto; }
+      .showcase__firstRow__textBox p {
+        font-family: 'Playfair Display', serif;
+        color: #fff;
+        font-size: 25px; }
+  .showcase__secondRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 150px 0 0 0; }
+    .showcase__secondRow__finger {
+      width: 50%;
+      display: flex;
+      justify-content: center; }
+      .showcase__secondRow__finger img {
+        height: 80%; }
+    .showcase__secondRow__girl {
+      width: 50%;
+      display: flex;
+      justify-content: center; }
+      .showcase__secondRow__girl img {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%; }
+
+.products {
+  margin: 200px 0; }
 
 .itemGrid--top {
   display: flex;
