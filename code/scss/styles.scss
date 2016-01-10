@@ -2,7 +2,7 @@
 //////////////
 body{
 	font-size: 100%;
-	background-color: #000;
+	background-color: #292929;
 }
 *{
 	margin: 0;
@@ -38,13 +38,9 @@ body, html{
 
 
 .showcase{
-	background: url("../img/velvet.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	background: #000;
 	height: 100%;
 	max-width: 1200px;
-	background: #000;
 	margin: 50px auto 100px auto;
 	padding: 50px;
 
@@ -118,6 +114,49 @@ body, html{
 
 }
 
+.modalCover{
+	position: fixed;	
+	height: 100%;
+	width: 100%;
+	background: #000;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	// display: none;
+}
+
+.modal{
+	position: fixed;	
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;	
+	top: 0;
+	left: 0;
+	// display: none;
+
+	&__box{
+		background: url("../img/modalBG.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		opacity: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 700px;
+		width: 700px;
+		border: 1px solid #bf9567;
+		margin: 20px 0 0 0;
+		padding: 20px;
+
+		img{
+			width: 80%;
+			height: 80%;
+		}
+	}
+}
+
 
 
 
@@ -143,7 +182,7 @@ body, html{
 	max-width: 1200px;
 	background: #000;
 	margin: 0 auto;
-	padding: 0 0 50px 0;
+	padding: 50px;
 
 		&__item{			
 			width: 200px;
