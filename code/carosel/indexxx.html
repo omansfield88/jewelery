@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Carosel</title>
+
+
+<link rel="stylesheet" href="owl.carousel.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="owl.carousel.js"></script>
+
+<style>
+.outerbox{
+	max-width: 500px;
+	height: 500px;
+	/*position: fixed;
+	top: 20px;
+	left: 30%;*/
+	background: #ccc;/*
+	display: none!important;*/
+}
+
+.innerbox{
+	background: #ddd;
+	height: 400px;
+	width: 400px;
+	padding: 0;
+	display: inline-block;
+}
+
+.owl-item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px 0;
+
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<div class="owl-carousel outerbox" id="slider">
+	<div class="innerbox">
+		<p>First</p>
+	</div>
+	<div class="innerbox">
+		<p>Second</p>
+	</div>
+	<div class="innerbox">
+		<p>third</p>
+	</div>
+	<div class="innerbox">
+		<p>four</p>
+	</div>
+	<div class="innerbox">
+		<p>five</p>
+	</div>
+	<div class="innerbox">
+		<p>six</p>
+	</div>
+	<div class="innerbox">
+		<p>seven</p>
+	</div>
+
+
+</div>
+<p id="myNext">Go right</p>
+<p id="myPrev">Go left</p>
+
+<p class="myItem" name="0">One</p>
+<p class="myItem" name="1">Two</p>
+<p class="myItem" name="2">Three</p>
+
+<script>
+
+//On click of .myItem, the myNum var is changed to whatever value the clicked thing's 'name' value is.
+//Which then defines what slide the carousel starts on when it's opened
+$(".myItem").click(function(){
+
+	setTimeout(function(){
+		var myNum = $(this).attr('name');
+		$("#slider").owlCarousel({
+				items : 1,
+				loop: true,
+				startPosition: myNum
+			});
+	}, 1000);
+	
+});
+
+
+	// $(document).ready(function(){
+	// 	$("#slider").owlCarousel({
+	// 		items : 1,
+	// 		responsive: false,
+	// 		loop: true,
+	// 		startPosition: 3
+	// 	});
+	// });
+
+
+// Go to the next item
+$('#myNext').click(function() {
+    $('.owl-carousel').trigger('next.owl.carousel');
+})
+// Go to the previous item
+$('#myPrev').click(function() {
+   $('.owl-carousel').trigger('prev.owl.carousel', [300]);
+})
+
+
+
+
+</script>
+
+</body>
+</html>

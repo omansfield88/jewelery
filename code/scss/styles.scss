@@ -110,8 +110,13 @@ body, html{
 				}
 			}					
 		}//__secondRow
+}
 
-
+#show{
+	display: block;
+}
+#hide{
+	display: none;
 }
 
 .modalCover{
@@ -122,18 +127,14 @@ body, html{
 	opacity: 0.5;
 	top: 0;
 	left: 0;
-	// display: none;
 }
 
 .modal{
 	position: fixed;	
 	height: 100%;
 	width: 100%;
-	display: flex;
-	justify-content: center;	
 	top: 0;
 	left: 0;
-	// display: none;
 
 	&__box{
 		background: url("../img/modalBG.jpg");
@@ -147,7 +148,7 @@ body, html{
 		height: 700px;
 		width: 700px;
 		border: 1px solid #bf9567;
-		margin: 20px 0 0 0;
+		margin: 20px auto;
 		padding: 20px;
 
 		img{
