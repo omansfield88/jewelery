@@ -5,9 +5,10 @@
 <title>Jewelery</title>
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/styles.css" type='text/css'>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-
+<script src="js/noframework.waypoints.js"></script>
 <script src="js/script.js"></script>
 
 
@@ -16,82 +17,122 @@
 <body>
 
 
-<section class="intro">
+<section id="cover" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-100%);">
 	<h1>Conor Joseph</h1>
-
 </section>
 
-<section class="showcase">
-	<div class="showcase__firstRow">
-		<div class="showcase__firstRow__textBox">
-			<h2>Organic</h2>
-			<p>Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body. Available in gold and silver these pieces can be made to order on request.</p>				
-		</div>
-		<div class="showcase__firstRow__image">
-			<img sredc="img/1.png">
-		</div>
-	</div>
 
-	<div class="showcase__secondRow">
-		<div class="showcase__secondRow__finger">
-			<img src="img/finger.png">
+<div id="theRest">
+	<section class="showcase">
+		<div class="showcase__firstRow">
+			<div class="showcase__firstRow__textBox">
+				<h2>Organic</h2>
+				<p>Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body. Available in gold and silver these pieces can be made to order on request.</p>				
+			</div>
+			<div class="showcase__firstRow__image">
+				<img sredc="img/1.png">
+			</div>
 		</div>
-		<div class="showcase__secondRow__girl">
-			<img src="img/girl.jpg">
-		</div>
-	</div>
-	
 
-<div class="modal" id="hide">
-	<div class="modalCover" id="hide">
-	</div>
-	<div class="owl-carousel modal__box" id="slider">
-		<img src="img/1.png">
-		<img src="img/2.png">
-		<img src="img/3.png">
-		<img src="img/4.png">
-		<img src="img/5.png">
-		<img src="img/6.png">
-		<img src="img/7.png">
-	</div>
+		<div class="showcase__secondRow">
+			<div class="showcase__secondRow__finger">
+				<img src="img/fingerA.png">
+				<img src="img/fingerB.png" data-50p="transform:translate(0,-40px);" data-150p="transform:translate(0, 40px);">
+				<img src="img/fingerC.png" data-50p="transform:translate(0,-60px);" data-150p="transform:translate(0, 80px);">
+				<img src="img/fingerD.png" data-50p="transform:translate(0,-80px);" data-150p="transform:translate(0, 110px);">
+			</div>
+			<div class="showcase__secondRow__girl">
+				<img src="img/girl.jpg">
+			</div>
+		</div>
+		
+
+		<div class="modal" id="hide">
+			<div class="modalCover" id="hide">
+			</div>
+			<div class="owl-carousel modal__box" id="slider">
+				<img src="img/1.png">
+				<img src="img/2.png">
+				<img src="img/3.png">
+				<img src="img/4.png">
+				<img src="img/5.png">
+				<img src="img/6.png">
+				<img src="img/7.png">
+			</div>
+		</div>
+
+		<div class="products">
+			<div class="itemGrid--top">
+				<div class="itemGrid--top__item">
+					<img src="img/1.png" class="product" name="0">
+				</div>
+				<div class="itemGrid--top__item">
+					<img src="img/2.png" class="product" name="1">
+				</div>
+				<div class="itemGrid--top__item">
+					<img src="img/3.png" class="product" name="2">
+				</div>
+				<div class="itemGrid--top__item">
+					<img src="img/4.png" class="product" name="3">
+				</div>
+			</div>
+			<div class="itemGrid--bottom">
+				<div class="itemGrid--bottom__item--first">
+					<img src="img/5.png" class="product" name="4">
+				</div>
+				<div class="itemGrid--bottom__item">
+					<img src="img/6.png" class="product" name="5">
+				</div>
+				<div class="itemGrid--bottom__item--last">
+					<img src="img/7.png" class="product" name="6">
+				</div>
+			</div>
+		</div>
+	</section>
 </div>
 
-<div class="products">
-
-
-	<div class="itemGrid--top">
-		<div class="itemGrid--top__item">
-			<img src="img/1.png" class="product" name="0">
-		</div>
-		<div class="itemGrid--top__item">
-			<img src="img/2.png" class="product" name="1">
-		</div>
-		<div class="itemGrid--top__item">
-			<img src="img/3.png" class="product" name="2">
-		</div>
-		<div class="itemGrid--top__item">
-			<img src="img/4.png" class="product" name="3">
-		</div>
-	</div>
-	<div class="itemGrid--bottom">
-		<div class="itemGrid--bottom__item--first">
-			<img src="img/5.png" class="product" name="4">
-		</div>
-		<div class="itemGrid--bottom__item">
-			<img src="img/6.png" class="product" name="5">
-		</div>
-		<div class="itemGrid--bottom__item--last">
-			<img src="img/7.png" class="product" name="6">
-		</div>
-	</div>
-
-
-</div>
-
-</section>
-
+<script type="text/javascript" src="js/skrollr.js"></script>
 
 <script>
+
+//COVER SLIDE//
+    var s = skrollr.init({
+    	
+    });
+
+    var waypoint = new Waypoint({
+	  element: document.getElementById('cover'),
+	  handler: function(direction) {
+
+	  	var fromTop = window.pageYOffset + "px";
+
+	    if (direction === 'down') {
+	    	console.log('going down')
+	    	document.getElementById('theRest').style.position = "relative";
+	    	document.getElementById('theRest').style.top = fromTop;
+	    }
+	  },
+	  offset: '-45%'
+	})
+
+	var waypoint2 = new Waypoint({
+	  element: document.getElementById('cover'),
+	  handler: function(direction) {
+	    if (direction === 'up') {
+	    	console.log('going up')
+	    	document.getElementById('theRest').style.position = "fixed";
+	    	document.getElementById('theRest').style.top = "0";
+	    }
+	  },
+	  offset: '-45%'
+	})
+
+
+
+
+
+
+//MODAL////
 var productClicked = 0;
 //On click of .myItem, the myNum var is changed to whatever value the clicked thing's 'name' value is.
 //Which then defines what slide the carousel starts on when it's opened
@@ -118,33 +159,6 @@ $(".modalCover").click(function(){
 
 </script>
 
-<!-- <section id="showcase">
-	<div class="itemGrid--top">
-		<div class="itemGrid--top__item--first">
-			<img src="img/ring.jpg">
-		</div>
-		<div class="itemGrid--top__item">
-			<img src="img/ring.jpg">
-		</div>
-		<div class="itemGrid--top__item">
-			<img src="img/ring.jpg">
-		</div>
-		<div class="itemGrid--top__item--last">
-			<img src="img/ring.jpg">
-		</div>
-	</div>
-	<div class="itemGrid--bottom">
-		<div class="itemGrid--bottom__item--first">
-			<img src="img/ring.jpg">
-		</div>
-		<div class="itemGrid--bottom__item--mid">
-			<img src="img/ring.jpg">
-		</div>
-		<div class="itemGrid--bottom__item--last">
-			<img src="img/ring.jpg">
-		</div>
-	</div>
-</section> -->
 
 
 

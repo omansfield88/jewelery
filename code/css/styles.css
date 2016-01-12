@@ -9,31 +9,28 @@ body {
 body, html {
   height: 100%; }
 
-.cover {
-  background: url("../img/coverbg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.intro {
+#cover {
   background: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .intro h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+  #cover h1 {
     font-family: 'Playfair Display', serif;
     color: #fff;
     font-size: 70px; }
+
+#theRest {
+  position: fixed;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100%; }
 
 .showcase {
   background: #000;
@@ -72,11 +69,11 @@ body, html {
     justify-content: space-between;
     margin: 150px 0 0 0; }
     .showcase__secondRow__finger {
-      width: 50%;
-      display: flex;
-      justify-content: center; }
+      width: 50%; }
       .showcase__secondRow__finger img {
-        height: 80%; }
+        display: block;
+        margin: auto;
+        padding: 0 50px 0 0; }
     .showcase__secondRow__girl {
       width: 50%;
       display: flex;
