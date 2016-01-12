@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Cover</title>
 
+<script type="text/javascript" src="js/noframework.waypoints.js"></script>
 
 <style>
 *{
@@ -13,7 +14,7 @@
 body, html{
 	height: 100%;
 }
-.cover{
+#cover{
 	background: url("img/coverbg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -26,6 +27,12 @@ body, html{
 	z-index: 2;
 }
 
+#container{
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
 .rest{
 	top:0;
 	left:0;
@@ -33,7 +40,8 @@ body, html{
 }
 
 p{
-	font-size: 50px;
+	font-size: 60px;
+	margin: 0 200px;
 }
 
 
@@ -44,51 +52,62 @@ p{
 </head>
 <body>
 
-<section class="cover" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-100%);">
-<p>This is the up bit</p>
+<section id="cover" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-100%);">
 </section>
+
+<div id="container">
+<section class="rest" >
+	<p>ONE.</p>
+	<p>Two.</p>
+	<p>Three.</p>
+	<p>Four</p>
+	<p>Five.</p>
+	<p>Six.</p>
+	<p>Seven.</p>
 	
-<section class="rest" data-49p="position: fixed; top: 0;" data-50p="position: relative; top: 25%;">
-	<p>START ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
-	<p>2 ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
-	<p>3 ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
-	<p>4 ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
-	<p>5 ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
-	<p>6 ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
 </section>
-<!-- <section>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-		<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-		<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-	<p>More stuff</p>
-</section> -->
+</div>
 
 <script type="text/javascript" src="js/skrollr.js"></script>
 
     <script type="text/javascript">
+
+
     var s = skrollr.init({
-    	// forceHeight: false
+    	
     });
+
+
+
+
+    var waypoint = new Waypoint({
+	  element: document.getElementById('cover'),
+	  handler: function(direction) {
+
+	  	var fromTop = window.pageYOffset + "px";
+
+	    if (direction === 'down') {
+	    	console.log('going down')
+	    	document.getElementById('container').style.position = "relative";
+	    	document.getElementById('container').style.top = fromTop;
+	    }
+	  },
+	  offset: '-50%'
+	})
+
+	var waypoint2 = new Waypoint({
+	  element: document.getElementById('cover'),
+	  handler: function(direction) {
+	    if (direction === 'up') {
+	    	console.log('going up')
+	    	document.getElementById('container').style.position = "fixed";
+	    	document.getElementById('container').style.top = "0";
+	    }
+	  },
+	  offset: '-50%'
+	})
+
+
     </script>
 
 </body>
