@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cover</title>
+
+
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+body, html{
+	height: 100%;
+}
+.cover{
+	background: url("img/coverbg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.rest{
+	top:0;
+	left:0;
+	z-index: 1;
+}
+
+p{
+	font-size: 50px;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+<section class="cover" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-100%);">
+<p>This is the up bit</p>
+</section>
+	
+<section class="rest" data-49p="position: fixed; top: 0;" data-50p="position: relative; top: 25%;">
+	<p>START ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
+	<p>2 ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
+	<p>3 ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
+	<p>4 ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
+	<p>5 ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
+	<p>6 ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam blanditiis corporis odit ducimus sed, nihil impedit vitae eius amet! Sequi minima nam beatae accusantium neque eveniet ad ipsum! Molestias.</p>
+</section>
+<!-- <section>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+		<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+		<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+	<p>More stuff</p>
+</section> -->
+
+<script type="text/javascript" src="js/skrollr.js"></script>
+
+    <script type="text/javascript">
+    var s = skrollr.init({
+    	// forceHeight: false
+    });
+    </script>
+
+</body>
+</html>

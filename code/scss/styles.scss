@@ -13,6 +13,18 @@ body, html{
 }
 
 
+.cover{
+	background: url("../img/coverbg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 
 .intro{
 	background: url("../img/bg.jpg");
