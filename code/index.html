@@ -30,7 +30,7 @@
 				<p>Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body. Available in gold and silver these pieces can be made to order on request.</p>				
 			</div>
 			<div class="showcase__firstRow__image">
-				<img sredc="img/1.png">
+				<img src="img/1.png">
 			</div>
 		</div>
 
@@ -137,7 +137,7 @@ var productClicked = 0;
 //On click of .myItem, the myNum var is changed to whatever value the clicked thing's 'name' value is.
 //Which then defines what slide the carousel starts on when it's opened
 $(".product").click(function(){
-	var productClicked = $(this).attr('name');
+	productClicked = $(this).attr('name');
 	console.log(productClicked);
 
 	$(".modal , .modalCover").attr("id", "show");
@@ -155,6 +155,10 @@ $(".product").click(function(){
 $(".modalCover").click(function(){
 	console.log('clicked')
 	$(".modal , .modalCover").attr("id", "hide");
+	//Need to destroy the carousel or the 'startPosition' will still have the first 'productClicked' value in from whatever ring the user clicked first. This caused the first ring to be displayed no matter what ring you click next. Then you have to remove the classes that owl carousel adds to the DOM.
+	// $('#slider').owlCarousel('destroy');
+	$('#slider').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+	$('#slider').find('.owl-stage-outer').children().unwrap();
 })
 
 </script>
