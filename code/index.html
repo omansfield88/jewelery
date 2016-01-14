@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Jewelery</title>
+<title>Jewelry</title>
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/styles.css" type='text/css'>
 
@@ -17,12 +17,17 @@
 <body>
 
 
-<section id="cover" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-100%);">
+<section id="cover" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-80%);">
 	<h1>Conor Joseph</h1>
 </section>
 
 
-<div id="theRest">
+<main id="theRest">
+	<section class="intro">
+		<h1>Conor Joseph, Jewelry Design</h1>
+	</section>
+
+
 	<section class="showcase">
 		<div class="showcase__firstRow">
 			<div class="showcase__firstRow__textBox">
@@ -37,30 +42,15 @@
 		<div class="showcase__secondRow">
 			<div class="showcase__secondRow__finger">
 				<img src="img/fingerA.png">
-				<img src="img/fingerB.png" data-50p="transform:translate(0,-40px);" data-150p="transform:translate(0, 40px);">
-				<img src="img/fingerC.png" data-50p="transform:translate(0,-60px);" data-150p="transform:translate(0, 80px);">
-				<img src="img/fingerD.png" data-50p="transform:translate(0,-80px);" data-150p="transform:translate(0, 110px);">
+				<img src="img/fingerB.png" data-bottom="transform:translate(0,-80px);" data--100-top="transform:translate(0, -10px);">
+				<img src="img/fingerC.png" data-bottom="transform:translate(0,-120px);" data--100-top="transform:translate(0, 10px);">
+				<img src="img/fingerD.png" data-bottom="transform:translate(0,-120px);" data--100-top="transform:translate(0, 40px);">
 			</div>
 			<div class="showcase__secondRow__girl">
 				<img src="img/girl.jpg">
 			</div>
 		</div>
 		
-
-		<div class="modal" id="hide">
-			<div class="modalCover" id="hide">
-			</div>
-			<div class="owl-carousel modal__box" id="slider">
-				<img src="img/1.png">
-				<img src="img/2.png">
-				<img src="img/3.png">
-				<img src="img/4.png">
-				<img src="img/5.png">
-				<img src="img/6.png">
-				<img src="img/7.png">
-			</div>
-		</div>
-
 		<div class="products">
 			<div class="itemGrid--top">
 				<div class="itemGrid--top__item">
@@ -89,15 +79,35 @@
 			</div>
 		</div>
 	</section>
+</main>
+
+<div class="modal" id="hide">
+	<div class="modalCover" id="hide">
+	</div>
+	<div class="owl-carousel modal__box" id="slider">
+		<img src="img/1.png">
+		<img src="img/2.png">
+		<img src="img/3.png">
+		<img src="img/4.png">
+		<img src="img/5.png">
+		<img src="img/6.png">
+		<img src="img/7.png">
+	</div>
 </div>
+
+
+
 
 <script type="text/javascript" src="js/skrollr.js"></script>
 
 <script>
 
+var windowHeight = window.innerHeight + "px";
+$(".intro").css("min-height", windowHeight);
+
+
 //COVER SLIDE//
-    var s = skrollr.init({
-    	
+    var s = skrollr.init({    	
     });
 
     var waypoint = new Waypoint({
@@ -112,7 +122,7 @@
 	    	document.getElementById('theRest').style.top = fromTop;
 	    }
 	  },
-	  offset: '-45%'
+	  offset: '-55%'
 	})
 
 	var waypoint2 = new Waypoint({
@@ -124,7 +134,7 @@
 	    	document.getElementById('theRest').style.top = "0";
 	    }
 	  },
-	  offset: '-45%'
+	  offset: '-55%'
 	})
 
 
@@ -138,7 +148,8 @@ var productClicked = 0;
 //Which then defines what slide the carousel starts on when it's opened
 $(".product").click(function(){
 	productClicked = $(this).attr('name');
-	console.log(productClicked);
+	console.log(productClicked);	
+	$("#theRest").addClass('blurThis');
 
 	$(".modal , .modalCover").attr("id", "show");
 
@@ -157,9 +168,14 @@ $(".modalCover").click(function(){
 	$(".modal , .modalCover").attr("id", "hide");
 	//Need to destroy the carousel or the 'startPosition' will still have the first 'productClicked' value in from whatever ring the user clicked first. This caused the first ring to be displayed no matter what ring you click next. Then you have to remove the classes that owl carousel adds to the DOM.
 	// $('#slider').owlCarousel('destroy');
+	$("#theRest").removeClass('blurThis');
 	$('#slider').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
 	$('#slider').find('.owl-stage-outer').children().unwrap();
 })
+
+
+
+
 
 </script>
 

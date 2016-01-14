@@ -19,7 +19,10 @@ body, html {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2; }
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   #cover h1 {
     font-family: 'Playfair Display', serif;
     color: #fff;
@@ -30,14 +33,34 @@ body, html {
   margin: 0 auto;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
+
+.blurThis {
+  -webkit-filter: blur(5px);
+  transition: 0.5s; }
+
+.intro {
+  width: 100%;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .intro h1 {
+    font-family: 'Playfair Display', serif;
+    color: #000;
+    font-size: 70px; }
 
 .showcase {
   background: #000;
   height: 100%;
   max-width: 1200px;
   margin: 50px auto 100px auto;
-  padding: 50px; }
+  padding: 50px;
+  transition: 0.5s;
+  border: 1px solid #bf9567; }
+  .showcase .products {
+    border: 1px solid #bf9567; }
   .showcase__firstRow {
     width: 100%;
     display: flex;
@@ -96,7 +119,8 @@ body, html {
   background: #000;
   opacity: 0.5;
   top: 0;
-  left: 0; }
+  left: 0;
+  transition: 1s; }
 
 .modal {
   position: fixed;
