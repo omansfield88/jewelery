@@ -1,3 +1,7 @@
+$break-small: 321px;
+$break-medium: 700px;
+$break-large: 1080px;
+
 //RESETS etc//
 //////////////
 body{
@@ -64,9 +68,9 @@ body, html{
 }
 
 #theRest{
-	position: fixed;
-	display: flex;
-	justify-content: center;
+	// position: fixed;
+	// display: flex;
+	// justify-content: center;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -81,20 +85,29 @@ body, html{
 
 
 .intro{	
-	width: 80%;
+	width: 100%;
 	background: #ccc;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: center;
 	padding: 20px;
 	box-sizing: border-box; //20px padding is included in the 80% width
 
 		&__text{			
-			width: 33.3333%;
-			background: #ddd;
-			margin: 0 20px 0 0;
+			width: 100%;
+			background: #ddd;			
 			padding: 20px;
-			// box-sizing: border-box;
+			box-sizing: border-box;
+
+				@media screen and (min-width: $break-medium) {
+				   width: 50%;
+				   margin: 0;
+				 }
+
+				@media screen and (min-width: $break-large){
+					width: 33.3333%;
+				}
 	
 			h1{
 				font-family: 'Playfair Display', serif;
@@ -132,11 +145,19 @@ body, html{
 		}
 
 		&__nav{			
-			width: 66.6666%;
-			background: red;
-			display: flex;
-			align-items: flex-start;
+			width: 100%;
+			display: flex;			
 			flex-wrap: wrap;
+			vertical-align: top;
+
+				@media screen and (min-width: $break-medium) {
+				   width: 50%;
+				    margin: 0;
+				 }
+
+				@media screen and (min-width: $break-large){
+					width: 66.6666%;
+				}
 
 
 				&__tile--full{					
@@ -167,10 +188,49 @@ body, html{
 }
 
 .skin{
-	background: grey;
-	padding: 50px;
+	background-image: url('../img/tile-skin.jpg');
+	background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 100%;
+	padding: 150px;
+
+		h2{
+			color: #ffffff;
+			font-family: 'Playfair Display', serif;
+			font-size: 80px;
+			letter-spacing: 50px;
+		}
 }
 
+.scally{
+	background-image: url('../img/tile-scally.jpg');
+	background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 100%;
+	padding: 150px;
+
+		h2{
+			color: #ffffff;
+			font-family: 'Playfair Display', serif;
+			font-size: 40px;
+			letter-spacing: 20px;
+		}
+}
+
+.press{
+	background-image: url('../img/tile-press.jpg');
+	background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 100%;
+	padding: 150px;
+
+		h2{
+			color: #ffffff;
+			font-family: 'Playfair Display', serif;
+			font-size: 40px;
+			letter-spacing: 20px;
+		}
+}
 
 
 
@@ -180,13 +240,31 @@ body, html{
 	width: 100%;
 	// box-sizing: border-box;
 }
+.col8{
+	width: calc(66.6666% - 10px);
+}
+
 .col6{
 	width: calc(50% - 10px);
-	
 }
+
 .col4{
-	width: 25%
+	width: calc(25% - 10px);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
