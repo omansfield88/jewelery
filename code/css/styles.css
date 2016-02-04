@@ -69,9 +69,9 @@ body, html {
     background: #ddd;
     padding: 20px;
     box-sizing: border-box; }
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 750px) {
       .intro__text {
-        width: 50%;
+        width: 33.3333%;
         margin: 0; } }
     @media screen and (min-width: 1080px) {
       .intro__text {
@@ -105,9 +105,9 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     vertical-align: top; }
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 750px) {
       .intro__nav {
-        width: 50%;
+        width: 66.6666%;
         margin: 0; } }
     @media screen and (min-width: 1080px) {
       .intro__nav {
@@ -119,11 +119,14 @@ body, html {
       justify-content: center;
       box-sizing: border-box; }
     .intro__nav__tile--first {
-      margin: 0 20px 0 0;
+      margin: 0 0 20px 0;
       display: flex;
       align-items: center;
       justify-content: center;
       box-sizing: border-box; }
+      @media screen and (min-width: 530px) {
+        .intro__nav__tile--first {
+          margin: 0 20px 20px 0; } }
     .intro__nav__tile--last {
       margin: 0 0 20px 0;
       display: flex;
@@ -135,49 +138,67 @@ body, html {
   background-image: url("../img/tile-skin.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
-  padding: 150px; }
+  background-size: cover;
+  min-height: 300px; }
   .skin h2 {
     color: #ffffff;
     font-family: 'Playfair Display', serif;
-    font-size: 80px;
-    letter-spacing: 50px; }
+    font-size: 80px; }
 
 .scally {
   background-image: url("../img/tile-scally.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
-  padding: 150px; }
+  background-size: cover;
+  min-height: 300px; }
   .scally h2 {
     color: #ffffff;
     font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    letter-spacing: 20px; }
+    font-size: 40px; }
 
 .press {
   background-image: url("../img/tile-press.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
-  padding: 150px; }
+  background-size: cover;
+  min-height: 300px; }
   .press h2 {
     color: #ffffff;
     font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    letter-spacing: 20px; }
+    font-size: 40px; }
 
-.col12 {
+.grid-1-1 {
   width: 100%; }
 
-.col8 {
-  width: calc(66.6666% - 10px); }
+.grid-1-2 {
+  width: 100%; }
+  @media screen and (min-width: 530px) {
+    .grid-1-2 {
+      width: calc(50% - 10px); } }
 
-.col6 {
-  width: calc(50% - 10px); }
+.grid-2-3 {
+  width: 100%; }
+  @media screen and (min-width: 530px) {
+    .grid-2-3 {
+      width: calc(66.6666% - 10px); } }
+  @media screen and (min-width: 750px) {
+    .grid-2-3 {
+      width: calc(66.6666% - 10px); } }
+  @media screen and (min-width: 1080px) {
+    .grid-2-3 {
+      width: calc(66.6666% - 10px); } }
 
-.col4 {
-  width: calc(25% - 10px); }
+.grid-1-3 {
+  width: 100%; }
+  @media screen and (min-width: 530px) {
+    .grid-1-3 {
+      width: calc(33.333% - 10px); } }
+  @media screen and (min-width: 750px) {
+    .grid-1-3 {
+      width: calc(33.333% - 10px); } }
+  @media screen and (min-width: 1080px) {
+    .grid-1-3 {
+      width: calc(33.333% - 10px); } }
 
 .showcase {
   background: #000;
