@@ -10,7 +10,7 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/noframework.waypoints.js"></script>
 <script src="js/script.js"></script>
-
+<script src="js/productInfo.json"></script>
 
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
 </head>
@@ -21,8 +21,8 @@
 
 
 
-<section class="showcase">
-	<div class="showcase__firstRow">
+<main class="showcase">
+	<!-- <div class="showcase__firstRow">
 		<div class="showcase__firstRow__textBox">
 			<h2>Skin</h2>
 			<p>Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body. Available in gold and silver these pieces can be made to order on request. Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body. Available in gold and silver these pieces can be made to order on request.</p>				
@@ -46,36 +46,59 @@
 		</div>
 	</div>
 	
+ -->
 
-<!-- 
+	
+
+
+
+
+
+
 	<div class="products">
+		
 		<div class="itemGrid--top">
-			<div class="itemGrid--top__item">
-				<img src="img/1.png" class="product" name="0">
+			<div class="itemGrid--top__item--first">
+				<img src="img/products/ear3.png" class="product" name="0">
 			</div>
 			<div class="itemGrid--top__item">
-				<img src="img/2.png" class="product" name="1">
+				<img src="img/products/ear1.png" class="product" name="1">
 			</div>
-			<div class="itemGrid--top__item">
-				<img src="img/3.png" class="product" name="2">
-			</div>
-			<div class="itemGrid--top__item">
-				<img src="img/4.png" class="product" name="3">
+			<div class="itemGrid--top__item--last">
+				<img src="img/products/ear2.png" class="product" name="2">
 			</div>
 		</div>
+
+		<div class="itemGrid--mid">
+			<div class="itemGrid--mid__item--first">
+				<img src="img/products/ring3.png" class="product" name="3">
+			</div>
+			<div class="itemGrid--mid__item--second">
+				<img src="img/products/ring2.png" class="product" name="4">
+			</div>
+			<div class="itemGrid--mid__item--third">
+				<img src="img/products/ring4.png" class="product" name="5">
+			</div>
+			<div class="itemGrid--mid__item--fourth">
+				<img src="img/products/ring1.png" class="product" name="6">
+			</div>
+		</div>
+
 		<div class="itemGrid--bottom">
 			<div class="itemGrid--bottom__item--first">
-				<img src="img/5.png" class="product" name="4">
+				<img src="img/products/knuckle1.png" class="product" name="7">
 			</div>
 			<div class="itemGrid--bottom__item">
-				<img src="img/6.png" class="product" name="5">
+				<img src="img/products/knuckle2.png" class="product" name="8">
 			</div>
 			<div class="itemGrid--bottom__item--last">
-				<img src="img/7.png" class="product" name="6">
+				<img src="img/products/knuckle3.png" class="product" name="9">
 			</div>
 		</div>
-	</div>  -->
-</section>
+
+	</div> 
+
+</main>
 
 
 
@@ -83,17 +106,34 @@
 
 
 <div class="modal" id="hide">
-	<div class="modalCover" id="hide">
+	<!-- <div class="modalCover" id="hide">
+	</div> -->
+	<div>
+		
+		<div class="owl-carousel modal__box" id="slider">
+			<img src="img/products/ear3.png">
+			<img src="img/products/ear1.png">
+			<img src="img/products/ear2.png">
+			<img src="img/products/ring3.png">
+			<img src="img/products/ring2.png">
+			<img src="img/products/ring4.png">
+			<img src="img/products/ring1.png">
+			<img src="img/products/knuckle1.png">
+			<img src="img/products/knuckle2.png">
+			<img src="img/products/knuckle3.png">
+		</div>
+		<div class="modal__text">
+			<h3 id="itemTitle">Ring</h3>
+			<hr/>
+			<span>Rose Gold</span>
+			<span>5cm x 5cm</span>
+			<p>To be warn on the ring finger between the first and second knuckle.</p>
+			<hr/>
+			<nav id="nav-prev">Prev</nav>
+			<nav id="nav-next">Next</nav>
+		</div>
 	</div>
-	<div class="owl-carousel modal__box" id="slider">
-		<img src="img/1.png">
-		<img src="img/2.png">
-		<img src="img/3.png">
-		<img src="img/4.png">
-		<img src="img/5.png">
-		<img src="img/6.png">
-		<img src="img/7.png">
-	</div>
+	
 </div>
 
 
@@ -128,31 +168,56 @@
 
 //MODAL////
 var productClicked = 0;
-//On click of .myItem, the myNum var is changed to whatever value the clicked thing's 'name' value is.
-//Which then defines what slide the carousel starts on when it's opened
+var owl = $("#slider");
+
+
 $(".product").click(function(){
 	productClicked = $(this).attr('name');
-	console.log(productClicked);	
-	$("#theRest").addClass('blurThis');
+	$(".products").addClass('blurThis');
 
 	$(".modal , .modalCover").attr("id", "show");
 
 	// setTimeout(function(){		
-		$("#slider").owlCarousel({
+		owl.owlCarousel({
 				items : 1,
 				loop: true,
-				startPosition: productClicked
+				startPosition: productClicked,
 			});
 	// }, 1000);
 	
+	$('#itemTitle').text(itemPosition[productClicked].title); 
+
+	
 });
+
+
+
+//Next and Prev buttons
+$("#nav-next").click(function(){owl.trigger("next.owl.carousel");})
+			  .css('cursor', 'pointer');
+
+$("#nav-prev").click(function(){owl.trigger("prev.owl.carousel");})
+			  .css('cursor', 'pointer');
+
+//Detect when slide changes, uses that number to refer to an array where the correct product info is stored.
+owl.on('changed.owl.carousel', function(event) {
+     var currentItem = event.page.index;
+     console.log(Math.abs(currentItem));   
+    
+	$('#itemTitle').text(itemPosition[Math.abs(currentItem)].title); 
+})
+
+
+
+
+
 
 $(".modalCover").click(function(){
 	console.log('clicked')
 	$(".modal , .modalCover").attr("id", "hide");
 	//Need to destroy the carousel or the 'startPosition' will still have the first 'productClicked' value in from whatever ring the user clicked first. This caused the first ring to be displayed no matter what ring you click next. Then you have to remove the classes that owl carousel adds to the DOM.
 	// $('#slider').owlCarousel('destroy');
-	$("#theRest").removeClass('blurThis');
+	$(".products").removeClass('blurThis');
 	$('#slider').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
 	$('#slider').find('.owl-stage-outer').children().unwrap();
 })

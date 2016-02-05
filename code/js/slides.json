@@ -1,0 +1,14 @@
+{
+  "owl" : [
+      {"item" : "<img src='img/products/ear3.png'>"},
+      {"item" : "<img src='img/products/ear1.png'>"},
+      {"item" : "<img src='img/products/ear2.png'>"},
+      {"item" : "<img src='img/products/ring3.png'>"},
+      {"item" : "<img src='img/products/ring2.png'>"},
+      {"item" : "<img src='img/products/ring4.png'>"},
+      {"item" : "<img src='img/products/ring1.png'>"},
+      {"item" : "<img src='img/products/knuckle1.png'>"},
+      {"item" : "<img src='img/products/knuckle2.png'>"},
+      {"item" : "<img src='img/products/knuckle3.png'>"}
+  ]
+}
