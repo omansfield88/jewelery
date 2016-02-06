@@ -106,8 +106,8 @@
 
 
 <div class="modal" id="hide">
-	<!-- <div class="modalCover" id="hide">
-	</div> -->
+	<div class="modalCover" id="hide">
+	</div>
 	<div>
 		
 		<div class="owl-carousel modal__box" id="slider">
@@ -199,11 +199,11 @@ $("#nav-next").click(function(){owl.trigger("next.owl.carousel");})
 $("#nav-prev").click(function(){owl.trigger("prev.owl.carousel");})
 			  .css('cursor', 'pointer');
 
+
 //Detect when slide changes, uses that number to refer to an array where the correct product info is stored.
 owl.on('changed.owl.carousel', function(event) {
      var currentItem = event.page.index;
-     console.log(Math.abs(currentItem));   
-    
+     console.log(Math.abs(currentItem));    
 	$('#itemTitle').text(itemPosition[Math.abs(currentItem)].title); 
 })
 
