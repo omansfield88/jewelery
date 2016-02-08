@@ -10,13 +10,13 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/script.js"></script>
 
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,400italic,500italic,700,700italic,300|Playfair+Display:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 
-<section id="cover" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-80%);">
+<!-- <section id="cover" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-80%);">
 	
 		<div class="coverContent">
 			<h1>Conor Joseph</h1>
@@ -54,26 +54,21 @@
 					</svg>	
 			</div>
 		</div>
-</section>
+</section> -->
 
 
 <section class="intro" id="theRest">
-	<div class="intro__text">
-		<h1>Conor Joseph</h1>
-		<hr>			
-		<p>London based Jewelry Designer. Graduated from Central St Martens. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sedgendi laudantium quisquam, nulla voluptates, suscipit earum, eaque, omnis.</p>
-		<ul>
-			<li>
-				Collection
-			</li>
-			<li>
-				Press
-			</li>
-			<li>
-				Contact
-			</li>
-			<li>Ordering info</li>
-		</ul>
+	<div class="intro-text-container">
+		<div class="intro__text">
+			<h1>Conor Joseph</h1>
+				
+			<p>London based Jewelry Designer. Graduated from Central St Martens. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Euscipit earum, eaque omnis.</p>
+			<p>All pieces are made to order</p>
+			
+			<a href="#">info@conorjoseph.com</a>
+			<a href="07505013326">07505013326</a>
+			<num>
+		</div>
 	</div>
 	<div class="intro__nav">
 		<div class="intro__nav__tile--full skin grid-1-1">
@@ -101,40 +96,40 @@
 
 <script>
 
-var windowHeight = window.innerHeight + "px";
-$(".intro").css("min-height", windowHeight);
+// var windowHeight = window.innerHeight + "px";
+// $(".intro").css("min-height", windowHeight);
 
 
-//COVER SLIDE//
-    var s = skrollr.init({    	
-    });
+// //COVER SLIDE//
+//     var s = skrollr.init({    	
+//     });
 
-    var waypoint = new Waypoint({
-	  element: document.getElementById('cover'),
-	  handler: function(direction) {
+//     var waypoint = new Waypoint({
+// 	  element: document.getElementById('cover'),
+// 	  handler: function(direction) {
 
-	  	var fromTop = window.pageYOffset + "px";
+// 	  	var fromTop = window.pageYOffset + "px";
 
-	    if (direction === 'down') {
-	    	console.log('going down')
-	    	document.getElementById('theRest').style.position = "relative";
-	    	document.getElementById('theRest').style.top = fromTop;
-	    }
-	  },
-	  offset: '-70%'
-	})
+// 	    if (direction === 'down') {
+// 	    	console.log('going down')
+// 	    	document.getElementById('theRest').style.position = "relative";
+// 	    	document.getElementById('theRest').style.top = fromTop;
+// 	    }
+// 	  },
+// 	  offset: '-70%'
+// 	})
 
-	var waypoint2 = new Waypoint({
-	  element: document.getElementById('cover'),
-	  handler: function(direction) {
-	    if (direction === 'up') {
-	    	console.log('going up')
-	    	document.getElementById('theRest').style.position = "fixed";
-	    	document.getElementById('theRest').style.top = "0";
-	    }
-	  },
-	  offset: '-70%'
-	})
+// 	var waypoint2 = new Waypoint({
+// 	  element: document.getElementById('cover'),
+// 	  handler: function(direction) {
+// 	    if (direction === 'up') {
+// 	    	console.log('going up')
+// 	    	document.getElementById('theRest').style.position = "fixed";
+// 	    	document.getElementById('theRest').style.top = "0";
+// 	    }
+// 	  },
+// 	  offset: '-70%'
+// 	})
 
 
 

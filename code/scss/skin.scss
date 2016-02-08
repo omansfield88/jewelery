@@ -3,11 +3,17 @@ $tweak-rings: 380px;
 $break-medium: 750px;
 $break-large: 1080px;
 
+$title-font: 'Playfair Display', serif;
+$body-font: 'Roboto', sans-serif;
+
+$white: #BBB;
+$gold1: #bf9567;
+
 //RESETS etc//
 //////////////
 body{
 	font-size: 100%;
-	background-color: #212121;
+	background-color: #070707;
 }
 *{
 	margin: 0;
@@ -17,21 +23,95 @@ body, html{
 	height: 100%;
 }
 
+.outer-container{
+	width: 100%;
+	display:flex;
+	justify-content: center;
+}
 
+nav{
+	display: flex;
+	justify-content: center;
+	margin: 20px 0 20px 0;
 
+	a{
+		font-family: $title-font;
+		color: #fff;
+		font-size: 40px;
+		text-align: center;
+		font-weight: 400;
+		
+		text-decoration: none;
+	}
+}
 
+.svgEffect{
+	display: none;
+}
+
+.thesvg--top{
+	display: flex;
+	justify-content: center;
+	border-top: 1px solid #fff;
+}
+
+.thesvg--bottom{
+	display: flex;
+	justify-content: center;
+}
 
 
 .showcase{
-	background: #000;
+	background: #101010;
 	height: 100%;
 	max-width: 1200px;
-	margin: 50px auto 100px auto;	
+	margin: 0 auto 100px auto;	
 	border: 1px solid #bf9567;
 
+	@media screen and (min-width: $break-small) {
+		margin: 20px;
+	}
+
+	@media screen and (min-width: $break-medium) {
+		padding: 0 50px 0 50px;		
+	}	
+
+	h1{
+		font-family: $title-font;
+		color: $white;
+		display: block;
+		font-weight: normal;
+		text-align: center;
+		font-size: 70px;
+		font-weight: bold;
+		letter-spacing: -50px;
+		transition: easeIn;	
+		 -webkit-filter: url("#shadowed-goo");
+          filter: url("#shadowed-goo");	
+
+		@media screen and (min-width: $break-small) {
+			font-size: 90px;
+		}
+
 		@media screen and (min-width: $break-medium) {
-			padding: 50px;			
+			font-size: 120px;
 		}	
+
+	}
+
+	span{
+		font-size: 95px;
+
+		@media screen and (min-width: $break-small) {
+			font-size: 120px;
+		}
+
+		@media screen and (min-width: $break-medium) {
+			font-size: 160px;
+		}
+	}
+
+		
 
 
 		&__firstRow{	
@@ -40,11 +120,10 @@ body, html{
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			align-items:center;
+			padding: 50px 0 0 0;
 
 				@media screen and (min-width: $break-medium) {
 					width: auto;
-					padding: 0 50px;
 				}	
 
 			&__textBox{
@@ -55,45 +134,54 @@ body, html{
 						width: 50%;
 					}
 
-				h2{
-					font-family: 'Playfair Display', serif;
-					color: #fff;
-					font-size: 200px;
-					margin: 0 auto;
-				}
+				
 				p{
 					font-family: 'Playfair Display', serif;
-					color: #fff;
+					color: $white;
 					font-size: 25px;
 				}
 			}
 
 			&__image{
-				width: 90%;
-				min-height: 500px;
-				margin: 0 auto;
+				width: 100%;
+				margin: 30px 0 0 0;
 				box-sizing: border-box;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 
-				background-image: url('../img/ring1.png');
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: 100%;
+				// background-image: url('../img/products/ring1.png');
+				// background-repeat: no-repeat;
+				// background-position: center;
+				// background-size: 100%;
 
 					@media screen and (min-width: $break-small) {
-						background-size: 70%;
+						// background-size: 70%;
+						
 					}
 					
 
 					@media screen and (min-width: $break-medium) {
 						width: 50%;
-						background-position: right center;
-						background-size: 80%;
+						margin: 0;
+						// background-position: right center;
+						// background-size: 80%;
 
 					}
 
 					@media screen and (min-width: $break-large){
 						width: 50%;
 						
+					}
+
+					img{						
+						width: 60%;
+						max-width: 400px;
+						max-height: 400px;
+
+						@media screen and (min-width: $break-medium) {
+							padding: 0 0 0 40px;
+						}
 					}
 
 				
@@ -107,23 +195,40 @@ body, html{
 			display: flex;
 			justify-content: space-between;
 			// background: #ccc;
-			margin: 150px 0 0 0;
+			margin: 50px 0 0 0;
+			flex-wrap: wrap;
+			flex-direction: column-reverse;
+
+			@media screen and (min-width: $break-small){					
+				flex-direction: unset;
+			}
 			
 			&__finger{
-				width: 50%;				
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				margin: 30px 0 0 0;
+
+				@media screen and (min-width: $break-small){					
+					width: 50%;
+					margin: 0;					
+				}	
 
 				img{
-					display: block;
-					margin: auto;
-					padding: 0 50px 0 0;
+					width: 100%;
+					height: 100%;
 				}
 			}
 
 
 			&__girl{
-				width: 50%;
+				width: 100%;
 				display: flex;
-				justify-content: center;		
+				justify-content: center;
+
+				@media screen and (min-width: $break-small){
+					width: 50%;
+				}	
 
 				img{
 					margin: 0 auto;
@@ -147,24 +252,42 @@ body, html{
 
 
 .products{
-	margin: 200px 0;
+	margin: 150px 0 0 0;
 
 	h2{
-		color: #fff;
-		font-size: 100px;
-		font-family: 'Playfair Display', serif;
-		border-bottom: 1px solid #fff;
+		color: $white;
+		font-size: 40px;
+		font-family: $title-font;
+		text-align: center;
+		letter-spacing: 5px;
+		font-weight: normal;
+
+		@media screen and (min-width: $break-small) {
+			font-size: 60px;
+		}
+		@media screen and (min-width: $break-medium) {
+			font-size: 90px;
+		}
 	}
 }
 
 
+// .highlight{
+// 	height: 200px;
+// 	width: 200px;
+// 	border: 1px solid $gold1;
+// 	position: absolute;
+
+// }
 
 .itemGrid--top{
 	display: flex;
-	justify-content: space-around;
-	max-width: 1200px;
-	background: #000;
+	justify-content: space-around;	
+	background: #101010;
 	margin: 0 0 20px 0;
+	padding: 50px 0 0 0;
+	border-top: 1px solid $white;
+	
 
 		@media screen and (min-width: $break-small) {
 			
@@ -185,6 +308,8 @@ body, html{
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
+			position: relative;
+			
 
 			@media screen and (min-width: $break-small) {
 				padding: 0 0 0 100px;
@@ -192,6 +317,10 @@ body, html{
 
 			img{
 				width: 80%;
+				&:hover{
+					 -webkit-filter: grayscale(80%);
+					 filter: grayscale(80%);
+				}
 			}
 		}
 
@@ -203,6 +332,10 @@ body, html{
 
 			img{
 				width: 80%;
+				&:hover{
+					 -webkit-filter: grayscale(80%);
+					 filter: grayscale(80%);
+				}
 			}
 		}
 
@@ -218,6 +351,10 @@ body, html{
 
 			img{
 				width: 80%;
+				&:hover{
+					 -webkit-filter: grayscale(80%);
+					 filter: grayscale(80%);
+				}
 			}
 		}
 }
@@ -225,8 +362,7 @@ body, html{
 .itemGrid--mid{
 	display: flex;
 	justify-content: center;
-	max-width: 1200px;
-	background: #000;
+	background: #101010;
 	margin: 0 0 20px 0;
 	flex-wrap: wrap;
 
@@ -265,6 +401,10 @@ body, html{
 
 			img{
 				width: 100%;
+				&:hover{
+					 -webkit-filter: grayscale(80%);
+					 filter: grayscale(80%);
+				}
 			}
 		}
 
@@ -286,6 +426,10 @@ body, html{
 
 			img{
 				width: 70%;
+				&:hover{
+					 -webkit-filter: grayscale(80%);
+					 filter: grayscale(80%);
+				}
 			}
 		}
 
@@ -307,6 +451,10 @@ body, html{
 
 			img{
 				width: 70%;
+				&:hover{
+					 -webkit-filter: grayscale(80%);
+					 filter: grayscale(80%);
+				}
 			}
 		}
 
@@ -328,6 +476,10 @@ body, html{
 
 			img{
 				width: 80%;
+				&:hover{
+					 -webkit-filter: grayscale(80%);
+					 filter: grayscale(80%);
+				}
 			}
 		}		
 }
@@ -336,8 +488,7 @@ body, html{
 .itemGrid--bottom{
 	display: flex;
 	justify-content: space-around;
-	max-width: 1200px;
-	background: #000;
+	background: #101010;
 	margin: 0 0 70px 0;
 
 
@@ -353,6 +504,10 @@ body, html{
 
 			img{
 				width: 80%;
+				&:hover{
+					 -webkit-filter: grayscale(80%);
+					 filter: grayscale(80%);
+				}
 			}	
 		}
 
@@ -365,6 +520,10 @@ body, html{
 
 			img{
 				width: 80%;
+				&:hover{
+					 -webkit-filter: grayscale(80%);
+					 filter: grayscale(80%);
+				}
 			}
 		}
 
@@ -381,6 +540,10 @@ body, html{
 
 			img{
 				width: 70%;
+				&:hover{
+					 -webkit-filter: grayscale(80%);
+					 filter: grayscale(80%);
+				}
 			}
 		}
 }
@@ -411,10 +574,14 @@ body, html{
 	justify-content: center;
 	align-items: center;
 
+	@media screen and (min-width: $break-large) {
+		margin: 0 50px 0 50px;
+	}
+
 	&__box{
 		display: block;
-		max-height: 300px;
-		max-width: 300px;
+		max-height: 250px;
+		max-width: 250px;
 		border: 1px solid #bf9567;
 		margin: 0 auto;
 		background: url("../img/modalBG.jpg");
@@ -430,12 +597,13 @@ body, html{
 		}
 
 		@media screen and (min-width: $break-medium) {
-			display: inline-block!important;
-			max-height: 500px;
-			max-width: 500px;
+			
+			max-height: 400px;
+			max-width: 400px;
 		}
 
 		@media screen and (min-width: $break-large) {
+			display: inline-block!important;
 			max-height: 700px;
 			max-width: 700px;
 		}
@@ -451,44 +619,106 @@ body, html{
 		display: inline-block;
 		vertical-align: top;
 		padding: 0 0 0 10px;
-		max-width: 200px;
+		max-width: 250px;
+		
+
+		@media screen and (min-width: $break-small) {
+				max-width: 400px;
+		}
+
+		@media screen and (min-width: $break-medium) {
+				max-width: 400px;
+		}
+
+		@media screen and (min-width: $break-large) {
+				max-width: 200px;
+		}
 
 		h3{
-			color: #fff;
-			font-size: 50px;
+			color: $white;
+			font-size: 20px;
+			font-family: $title-font;
+			
+			@media screen and (min-width: $break-small) {
+				font-size: 50px;
+				margin: 0 0 15px 0;
+			}
+
+			@media screen and (min-width: $break-medium) {
+				font-size: 50px;
+			}
 		}
 
 		hr{
 			width: 100%;
-			margin: 10px 0;
 			border: 0;
 		    height: 1px;
-		    background: #fff;
+		    background: $white;
 		}
 
 		span{
-			color: #fff;
-			font-size: 30px;
+			color: $white;
+			font-size: 15px;
 			display: block;
+			font-family: $title-font;
+			font-style: italic;
+
+			@media screen and (min-width: $break-small) {
+				font-size: 30px;
+			}
 		}
 
 		p{
-			color: #fff;
-			font-size: 20px;
+			color: $white;
+			font-size: 12px;
 			display: block;
+			font-family: $title-font;
+			margin: 5px 0 5px 0;
+
+			@media screen and (min-width: $break-small) {
+				font-size: 20px;
+				margin: 10px 0 10px 0;
+			}
 		}
 
 		nav{
-			display: inline-block;
+			display: none;
 			text-decoration: underline;
-			color: #fff;
-			font-size: 30px;
-		}
-		#nav-next{
-			float: right;
+			color: $white;
+			font-family: $body-font;
+			font-size: 24px;
+			padding: 0 0 15px 0;
+			
+			@media screen and (min-width: $break-medium) {
+				display: inline-block;
+			}
+
 		}
 
-		
+		#nav-next{
+			float: right;
+		}		
+	}
+}
+
+.close-container{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+#close{
+	border: 1px solid $white;
+	width: 50px;
+	height: 50px;
+	padding: 8px 5px 5px 5px;
+	box-sizing: border-box;
+
+	span{
+		font-family: $body-font;
+		text-align: center;
+		font-size: 14px;
+		font-style: normal;
 	}
 }
 
@@ -504,3 +734,4 @@ body, html{
 #hide{
 	display: none;
 }
+

@@ -5,6 +5,7 @@
 <title>Skin</title>
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/skin.css" type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,400italic,500italic,700,700italic,300|Playfair+Display:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
@@ -12,23 +13,79 @@
 <script src="js/script.js"></script>
 <script src="js/productInfo.json"></script>
 
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
 
+<nav>
+	<a href="#">&#8592; &nbsp;Conor Joseph</a>		
+</nav>
 
 
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svgEffect">
+    <defs>
+      <filter id="shadowed-goo">
+          
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" id="moveblur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feBlend in2="shadow" in="goo" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+      <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+    </defs>
+</svg>
 
 
+<div class="outer-container">
 <main class="showcase">
-	<!-- <div class="showcase__firstRow">
-		<div class="showcase__firstRow__textBox">
-			<h2>Skin</h2>
-			<p>Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body. Available in gold and silver these pieces can be made to order on request. Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body. Available in gold and silver these pieces can be made to order on request.</p>				
+		
+	<h1 id="title"><span>S</span>KIN</h1>
+	<div class="thesvg--top">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 width="300px" height="150px" viewBox="0 150 300 150" xml:space="preserve">
+				 <g>			 			
+					<rect x="43.781" y="43.781" fill="none" stroke="#F2F2F2" stroke-width="2" stroke-miterlimit="10" width="212" height="212">
+					<animateTransform attributeName="transform"
+		 					  attributeType="XML"
+		 					  type="rotate"
+		 					  from="0 150 150"
+		 					  to="360 150 150"
+		 					  dur="60"
+		 					  repeatCount="indefinite">
+		 			</rect>
+
+					<circle fill="none" stroke="#F2F2F2" stroke-width="2" stroke-miterlimit="10" cx="151.707" cy="147.855" r="138.648">					
+					</circle>
+
+					<rect x="64.781" y="60.781" fill="none" stroke="#F2F2F2" stroke-width="2" stroke-miterlimit="10" width="174" height="174">					
+					</rect>
+
+					<rect x="43.87" y="43.87" transform="matrix(0.7071 0.7071 -0.7071 0.7071 149.7813 -62.0414)" fill="none" stroke="#F2F2F2" stroke-width="2" stroke-miterlimit="10" width="211.823" height="211.823">
+					<animateTransform attributeName="transform"
+		 					  attributeType="XML"
+		 					  type="rotate"
+		 					  from="360 150 150"
+		 					  to="0 150 150"
+		 					  dur="60"
+		 					  repeatCount="indefinite">
+					</rect>
+				</g>
+			</svg>	
+		</div>
+	<div class="showcase__firstRow">
+		<div class="showcase__firstRow__textBox">			
+			<p>Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body. Available in gold and silver these pieces can be made to order on request. Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body.<br><br>Available in gold and silver these pieces can be made to order on request.</p>				
 		</div>
 		<div class="showcase__firstRow__image">
-			
+			<img src="img/products/ring1-nogap.png">
 		</div>
 	</div>
 
@@ -36,17 +93,14 @@
 
 	<div class="showcase__secondRow">
 		<div class="showcase__secondRow__finger">
-			<img src="img/fingerA.png">
-			<img src="img/fingerB.png" data-bottom="transform:translate(0,-100px);" data--100-top="transform:translate(0, -10px);">
-			<img src="img/fingerC.png" data-bottom="transform:translate(0,-120px);" data--100-top="transform:translate(0, 10px);">
-			<img src="img/fingerD.png" data-bottom="transform:translate(0,-80px);" data--100-top="transform:translate(0, 40px);">
+			<img src="img/finger.png">
 		</div>
 		<div class="showcase__secondRow__girl">
 			<img src="img/girl.jpg">
 		</div>
 	</div>
 	
- -->
+
 
 	
 
@@ -56,10 +110,12 @@
 
 
 	<div class="products">
+
+		<h2>Collection</h2>
 		
 		<div class="itemGrid--top">
 			<div class="itemGrid--top__item--first">
-				<img src="img/products/ear3.png" class="product" name="0">
+				<img src="img/products/ear3.png" class="product" name="0">				
 			</div>
 			<div class="itemGrid--top__item">
 				<img src="img/products/ear1.png" class="product" name="1">
@@ -98,16 +154,17 @@
 
 	</div> 
 
+
+
 </main>
+</div><!--Outer container-->
 
 
-
-
-
+<div class="modalCover" id="hide">
+	</div>
 
 <div class="modal" id="hide">
-	<div class="modalCover" id="hide">
-	</div>
+	
 	<div>
 		
 		<div class="owl-carousel modal__box" id="slider">
@@ -123,6 +180,13 @@
 			<img src="img/products/knuckle3.png">
 		</div>
 		<div class="modal__text">
+			<div class="close-container">
+				<div id="close">
+					<span>Close</span>
+					<span>X</span>
+				</div>
+			</div>
+
 			<h3 id="itemTitle">Ring</h3>
 			<hr/>
 			<span>Rose Gold</span>
@@ -142,22 +206,14 @@
 
 
 
-
-
-
-
-
-
-
-
 <script type="text/javascript" src="js/skrollr.js"></script>
 
 <script>
 
 
 
-    var s = skrollr.init({    	
-    });
+var s = skrollr.init({    	
+});
 
  
 
@@ -200,6 +256,7 @@ $("#nav-prev").click(function(){owl.trigger("prev.owl.carousel");})
 			  .css('cursor', 'pointer');
 
 
+
 //Detect when slide changes, uses that number to refer to an array where the correct product info is stored.
 owl.on('changed.owl.carousel', function(event) {
      var currentItem = event.page.index;
@@ -212,15 +269,43 @@ owl.on('changed.owl.carousel', function(event) {
 
 
 
-$(".modalCover").click(function(){
-	console.log('clicked')
+$("#close").click(function(){
+	
 	$(".modal , .modalCover").attr("id", "hide");
 	//Need to destroy the carousel or the 'startPosition' will still have the first 'productClicked' value in from whatever ring the user clicked first. This caused the first ring to be displayed no matter what ring you click next. Then you have to remove the classes that owl carousel adds to the DOM.
 	// $('#slider').owlCarousel('destroy');
 	$(".products").removeClass('blurThis');
 	$('#slider').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
 	$('#slider').find('.owl-stage-outer').children().unwrap();
-})
+
+}).css('cursor', 'pointer');
+
+
+
+
+//Animate letter spacing of title 1 second after page load
+function animateTitle(){
+	 $("#title").animate({letterSpacing: "1px"}, 3000);
+}
+$( document ).ready(function() {
+	setTimeout(animateTitle, 500); 
+});
+
+
+
+
+//Reduce the goo effect in time with the letter spacing
+var svg = document.getElementById("moveblur");
+var warp = 10;
+
+setInterval (function(){
+	if (warp > 0){
+		warp = warp - 0.05;
+	} 
+  
+	svg.setAttribute("stdDeviation", warp);
+
+}, 20);
 
 
 

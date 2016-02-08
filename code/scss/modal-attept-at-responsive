@@ -1,0 +1,136 @@
+
+.modal{
+	position: fixed;	
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+
+	@media screen and (min-width: $break-large) {
+		margin: 0 50px 0 50px;
+	}
+
+	&__box{
+		display: block;
+		max-height: 250px;
+		max-width: 250px;
+		border: 1px solid #bf9567;
+		margin: 0 auto;
+		background: url("../img/modalBG.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		opacity: 1;	
+
+		@media screen and (min-width: $break-small) {
+			
+			max-height: 400px;
+			max-width: 400px;
+		}
+
+		@media screen and (min-width: $break-medium) {
+			
+			max-height: 400px;
+			max-width: 400px;
+		}
+
+		@media screen and (min-width: $break-large) {
+			display: inline-block!important;
+			max-height: 700px;
+			max-width: 700px;
+		}
+
+
+		img{
+			// width: 50%;
+			// height: 50%;
+		}
+	}
+
+	&__text{
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 0 0 10px;
+		max-width: 250px;
+		
+
+		@media screen and (min-width: $break-small) {
+				max-width: 400px;
+		}
+
+		@media screen and (min-width: $break-medium) {
+				max-width: 400px;
+		}
+
+		@media screen and (min-width: $break-large) {
+				max-width: 200px;
+		}
+
+		h3{
+			color: $white;
+			font-size: 20px;
+			font-family: $title-font;
+			
+			@media screen and (min-width: $break-small) {
+				font-size: 50px;
+				margin: 0 0 15px 0;
+			}
+
+			@media screen and (min-width: $break-medium) {
+				font-size: 50px;
+			}
+		}
+
+		hr{
+			width: 100%;
+			border: 0;
+		    height: 1px;
+		    background: $white;
+		}
+
+		span{
+			color: $white;
+			font-size: 15px;
+			display: block;
+			font-family: $title-font;
+			font-style: italic;
+
+			@media screen and (min-width: $break-small) {
+				font-size: 30px;
+			}
+		}
+
+		p{
+			color: $white;
+			font-size: 12px;
+			display: block;
+			font-family: $title-font;
+			margin: 5px 0 5px 0;
+
+			@media screen and (min-width: $break-small) {
+				font-size: 20px;
+				margin: 10px 0 10px 0;
+			}
+		}
+
+		nav{
+			display: none;
+			text-decoration: underline;
+			color: $white;
+			font-family: $body-font;
+			font-size: 24px;
+			padding: 0 0 15px 0;
+			
+			@media screen and (min-width: $break-medium) {
+				display: inline-block;
+			}
+
+		}
+
+		#nav-next{
+			float: right;
+		}		
+	}
+}

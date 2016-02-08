@@ -2,11 +2,14 @@ $break-small: 530px;
 $break-medium: 750px;
 $break-large: 1080px;
 
+$title-font: 'Playfair Display', serif;
+$body-font: 'Roboto', sans-serif;
+
 //RESETS etc//
 //////////////
 body{
 	font-size: 100%;
-	background-color: #212121;
+	background-color: #cccccc;
 }
 *{
 	margin: 0;
@@ -38,9 +41,10 @@ body, html{
 	margin: 0 auto;
 
 		h1{
-			font-family: 'Playfair Display', serif;
+			font-family: $title-font;
 			color: #fff;
 			font-size: 70px;
+			font-weight: 900;
 		}
 }
 
@@ -62,8 +66,7 @@ body, html{
 	text-align:center;
 }
 
-.thesvg{
-	
+.thesvg{	
 	text-align:center;
 }
 
@@ -77,21 +80,15 @@ body, html{
 	height: 100%;
 }
 
-.blurThis{
-	  -webkit-filter: blur(5px);
-	  transition: 0.5s;
-}
-
 
 
 .intro{	
-	position: fixed;
+	// position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	width: 100%;
-	background: #ccc;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
@@ -99,27 +96,33 @@ body, html{
 	padding: 20px;
 	box-sizing: border-box; //20px padding is included in the 80% width
 
+	.intro-text-container{
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		width: 100%;
+
+			@media screen and (min-width: $break-medium) {
+				width: calc(33.333% - 10px);
+				margin: 0 20px 0 0;    
+			}
+	}
+
 		&__text{			
-			width: 100%;
-			background: #ddd;			
 			padding: 20px;
 			box-sizing: border-box;
-			
-
-				@media screen and (min-width: $break-medium) {
-				    width: calc(33.333% - 10px);
-				    margin: 0 20px 0 0;    
-				 }
 
 				@media screen and (min-width: $break-large){
 					
 				}
 	
 			h1{
-				font-family: 'Playfair Display', serif;
+				font-family: $title-font;
 				color: #000;
 				font-size: 70px;
 				text-align: center;
+				font-weight: 400;
+				margin:20px 0 50px 0;
 			}
 
 			hr{
@@ -127,27 +130,28 @@ body, html{
 			}
 
 			p{
-				font-family: 'Playfair Display', serif;
+				font-family: $body-font;
 				color: #000;
-				font-size: 18px;
+				font-size: 24px;
 				text-align: center;
+				font-weight: 300;
+				margin: 0 0 20px 0;
+				line-height: 40px;
 			}
 
-			ul{
+			a{
+				font-family: $body-font;
+				color: #000;
+				font-size: 24px;
 				text-align: center;
-				margin: 0 20px 50px 20px;
+				font-weight: 300;
+				display: block;
+				padding: 0 0 10px 0;
+				text-decoration: none;
+				font-style: italic;
 			}
 
-			li{
-				font-family: 'Playfair Display', serif;
-				color: #000;
-				font-size: 28px;
-				text-align: center;
-				list-style: none;
-				display: inline-block;
-				padding: 10px;
-				text-decoration: underline;
-			}
+			
 		}
 
 		&__nav{			
@@ -208,7 +212,7 @@ body, html{
 
 		h2{
 			color: #ffffff;
-			font-family: 'Playfair Display', serif;
+			font-family: $title-font;
 			font-size: 80px;
 			
 		}
@@ -223,7 +227,7 @@ body, html{
 
 		h2{
 			color: #ffffff;
-			font-family: 'Playfair Display', serif;
+			font-family: $title-font;
 			font-size: 40px;
 			
 		}
@@ -239,7 +243,7 @@ body, html{
 
 		h2{
 			color: #ffffff;
-			font-family: 'Playfair Display', serif;
+			font-family: $title-font;
 			font-size: 40px;
 			
 		}
@@ -346,13 +350,13 @@ body, html{
 				width: 50%;
 				vertical-align: top;
 				h2{
-					font-family: 'Playfair Display', serif;
+					font-family: $title-font;
 					color: #fff;
 					font-size: 150px;
 					margin: 0 auto;
 				}
 				p{
-					font-family: 'Playfair Display', serif;
+					font-family: $title-font;
 					color: #fff;
 					font-size: 25px;
 				}

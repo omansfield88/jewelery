@@ -49,10 +49,5 @@ var itemPosition =
 		"title" : "Nine",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
-	},
-	{
-		"title" : "Ten",
-		"material" : "Rose Gold",
-		"description" : "To be warn balh"
-	},
+	}
 ]
