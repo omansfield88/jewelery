@@ -1,0 +1,49 @@
+$break-small: 530px;
+$break-medium: 750px;
+$break-large: 1080px;
+
+$title-font: 'Playfair Display', serif;
+$body-font: 'Roboto', sans-serif;
+
+//RESETS etc//
+//////////////
+body{
+	font-size: 100%;
+	background-color: #cccccc;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+body, html{
+	height: 100%;
+	background: #000;
+}
+
+
+nav{
+	display: flex;
+	justify-content: center;
+	margin: 20px 0 20px 0;
+
+	a{
+		font-family: $title-font;
+		color: #fff;
+		font-size: 40px;
+		text-align: center;
+		font-weight: 400;
+		
+		text-decoration: none;
+	}
+}
+
+
+#tumblrFeed{
+	width: 80%;
+	margin: 0 auto;
+
+}
+
+.grid-item{
+	max-width: 300px;
+}

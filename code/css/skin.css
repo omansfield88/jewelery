@@ -9,10 +9,11 @@ body {
 body, html {
   height: 100%; }
 
-.outer-container {
+#outer-container {
   width: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  transition: 0.25s; }
 
 nav {
   display: flex;
@@ -58,10 +59,8 @@ nav {
     text-align: center;
     font-size: 70px;
     font-weight: bold;
-    letter-spacing: -50px;
-    transition: easeIn;
-    -webkit-filter: url("#shadowed-goo");
-    filter: url("#shadowed-goo"); }
+    letter-spacing: -10px;
+    transition: easeIn; }
     @media screen and (min-width: 530px) {
       .showcase h1 {
         font-size: 90px; } }
@@ -350,10 +349,13 @@ nav {
   height: 100%;
   width: 100%;
   background: #000;
-  opacity: 0.5;
+  opacity: 0.8;
   top: 0;
   left: 0;
-  transition: 1s; }
+  transition: 0.5s; }
+
+.modalContent {
+  opacity: 0; }
 
 .modal {
   position: fixed;
@@ -372,7 +374,7 @@ nav {
     max-width: 250px;
     border: 1px solid #bf9567;
     margin: 0 auto;
-    background: url("../img/modalBG.jpg");
+    background: url("../img/skin/modalBG.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -462,7 +464,11 @@ nav {
   width: 50px;
   height: 50px;
   padding: 8px 5px 5px 5px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 10px 0 0 0; }
+  @media screen and (min-width: 1080px) {
+    #close {
+      margin: 0; } }
   #close span {
     font-family: "Roboto", sans-serif;
     text-align: center;

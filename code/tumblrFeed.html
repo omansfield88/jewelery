@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tumblr Feed</title>
+	<link rel="stylesheet" href="css/tumblrFeed.css" type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/tumblrFeed/masonry.pkgd.min.js"></script>
+	<script src="js/tumblrFeed/imagesloaded.pkgd.min.js"></script>
+</head>
+<body>
+
+
+<nav>
+	<a href="#">&#8592; &nbsp;Conor Joseph</a>		
+</nav>
+
+<main>
+	<section id="tumblrFeed" class="grid">
+	</section>
+</main>
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://conor-joseph.tumblr.com/api/read/json?num=100"></script>
+
+<script type="text/javascript">
+
+//TUMBLR JSON FEED
+$('#tumblrFeed').append("<h1>"+tumblr_api_read.tumblelog.name + "</h1>"); 
+
+for (var i=0;i<tumblr_api_read.posts.length;i++) {
+	 var thisPost = tumblr_api_read.posts[i];
+	  $('#tumblrFeed').append("<img class='grid-item' src='" + thisPost["photo-url-500"] + "'>");
+}
+
+
+//MASONRY//
+$('.grid').imagesLoaded( function(){
+	$('.grid').masonry({
+	  // options
+	  itemSelector: '.grid-item',
+	  isAnimated: true,
+      isFitWidth: true
+	});
+});
+
+</script>
+
+</body>
+</html>

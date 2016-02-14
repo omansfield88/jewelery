@@ -1,0 +1,32 @@
+body {
+  font-size: 100%;
+  background-color: #cccccc; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body, html {
+  height: 100%;
+  background: #000; }
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0; }
+  nav a {
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: none; }
+
+#tumblrFeed {
+  width: 80%;
+  margin: 0 auto; }
+
+.grid-item {
+  max-width: 300px; }
+
+/*# sourceMappingURL=tumblrFeed.css.map */

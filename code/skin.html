@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 <title>Skin</title>
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/skin.css" type='text/css'>
@@ -10,7 +11,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/noframework.waypoints.js"></script>
-<script src="js/script.js"></script>
+
 <script src="js/productInfo.json"></script>
 
 
@@ -23,28 +24,10 @@
 </nav>
 
 
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svgEffect">
-    <defs>
-      <filter id="shadowed-goo">
-          
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" id="moveblur" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
-          <feBlend in2="shadow" in="goo" result="goo" />
-          <feBlend in2="goo" in="SourceGraphic" result="mix" />
-      </filter>
-      <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-          <feBlend in2="goo" in="SourceGraphic" result="mix" />
-      </filter>
-    </defs>
-</svg>
 
 
-<div class="outer-container">
+
+<div id="outer-container">
 <main class="showcase">
 		
 	<h1 id="title"><span>S</span>KIN</h1>
@@ -85,7 +68,7 @@
 			<p>Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body. Available in gold and silver these pieces can be made to order on request. Cast <i>from,</i> and made to fit <i>to</i> the contours of the wearers body.<br><br>Available in gold and silver these pieces can be made to order on request.</p>				
 		</div>
 		<div class="showcase__firstRow__image">
-			<img src="img/products/ring1-nogap.png">
+			<img src="img/skin/products/ring1-nogap.png">
 		</div>
 	</div>
 
@@ -93,10 +76,10 @@
 
 	<div class="showcase__secondRow">
 		<div class="showcase__secondRow__finger">
-			<img src="img/finger.png">
+			<img src="img/skin/finger.png">
 		</div>
 		<div class="showcase__secondRow__girl">
-			<img src="img/girl.jpg">
+			<img src="img/skin/girl.jpg">
 		</div>
 	</div>
 	
@@ -115,49 +98,86 @@
 		
 		<div class="itemGrid--top">
 			<div class="itemGrid--top__item--first">
-				<img src="img/products/ear3.png" class="product" name="0">				
+				<img src="img/skin/products/ear3.png" class="product" name="0">				
 			</div>
 			<div class="itemGrid--top__item">
-				<img src="img/products/ear1.png" class="product" name="1">
+				<img src="img/skin/products/ear1.png" class="product" name="1">
 			</div>
 			<div class="itemGrid--top__item--last">
-				<img src="img/products/ear2.png" class="product" name="2">
+				<img src="img/skin/products/ear2.png" class="product" name="2">
 			</div>
 		</div>
 
 		<div class="itemGrid--mid">
 			<div class="itemGrid--mid__item--first">
-				<img src="img/products/ring3.png" class="product" name="3">
+				<img src="img/skin/products/ring3.png" class="product" name="3">
 			</div>
 			<div class="itemGrid--mid__item--second">
-				<img src="img/products/ring2.png" class="product" name="4">
+				<img src="img/skin/products/ring2.png" class="product" name="4">
 			</div>
 			<div class="itemGrid--mid__item--third">
-				<img src="img/products/ring4.png" class="product" name="5">
+				<img src="img/skin/products/ring4.png" class="product" name="5">
 			</div>
 			<div class="itemGrid--mid__item--fourth">
-				<img src="img/products/ring1.png" class="product" name="6">
+				<img src="img/skin/products/ring1.png" class="product" name="6">
 			</div>
 		</div>
 
 		<div class="itemGrid--bottom">
 			<div class="itemGrid--bottom__item--first">
-				<img src="img/products/knuckle1.png" class="product" name="7">
+				<img src="img/skin/products/knuckle1.png" class="product" name="7">
 			</div>
 			<div class="itemGrid--bottom__item">
-				<img src="img/products/knuckle2.png" class="product" name="8">
+				<img src="img/skin/products/knuckle2.png" class="product" name="8">
 			</div>
 			<div class="itemGrid--bottom__item--last">
-				<img src="img/products/knuckle3.png" class="product" name="9">
+				<img src="img/skin/products/knuckle3.png" class="product" name="9">
 			</div>
 		</div>
 
 	</div> 
 
 
+	
+
+	<div class="thesvg--bottom">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 width="300px" height="150px" viewBox="0 150 300 -150" xml:space="preserve">
+				 <g>			 			
+					<rect x="43.781" y="43.781" fill="none" stroke="#F2F2F2" stroke-width="2" stroke-miterlimit="10" width="212" height="212">
+					<animateTransform attributeName="transform"
+		 					  attributeType="XML"
+		 					  type="rotate"
+		 					  from="0 150 150"
+		 					  to="360 150 150"
+		 					  dur="60"
+		 					  repeatCount="indefinite">
+		 			</rect>
+
+					<circle fill="none" stroke="#F2F2F2" stroke-width="2" stroke-miterlimit="10" cx="151.707" cy="147.855" r="138.648">					
+					</circle>
+
+					<rect x="64.781" y="60.781" fill="none" stroke="#F2F2F2" stroke-width="2" stroke-miterlimit="10" width="174" height="174">					
+					</rect>
+
+					<rect x="43.87" y="43.87" transform="matrix(0.7071 0.7071 -0.7071 0.7071 149.7813 -62.0414)" fill="none" stroke="#F2F2F2" stroke-width="2" stroke-miterlimit="10" width="211.823" height="211.823">
+					<animateTransform attributeName="transform"
+		 					  attributeType="XML"
+		 					  type="rotate"
+		 					  from="360 150 150"
+		 					  to="0 150 150"
+		 					  dur="60"
+		 					  repeatCount="indefinite">
+				</rect>
+				</g>
+		</svg>	
+	</div>
 
 </main>
 </div><!--Outer container-->
+
+
+
 
 
 <div class="modalCover" id="hide">
@@ -165,19 +185,18 @@
 
 <div class="modal" id="hide">
 	
-	<div>
-		
+	<div class="modalContent">		
 		<div class="owl-carousel modal__box" id="slider">
-			<img src="img/products/ear3.png">
-			<img src="img/products/ear1.png">
-			<img src="img/products/ear2.png">
-			<img src="img/products/ring3.png">
-			<img src="img/products/ring2.png">
-			<img src="img/products/ring4.png">
-			<img src="img/products/ring1.png">
-			<img src="img/products/knuckle1.png">
-			<img src="img/products/knuckle2.png">
-			<img src="img/products/knuckle3.png">
+			<img src="img/skin/products/ear3.png">
+			<img src="img/skin/products/ear1.png">
+			<img src="img/skin/products/ear2.png">
+			<img src="img/skin/products/ring3.png">
+			<img src="img/skin/products/ring2.png">
+			<img src="img/skin/products/ring4.png">
+			<img src="img/skin/products/ring1.png">
+			<img src="img/skin/products/knuckle1.png">
+			<img src="img/skin/products/knuckle2.png">
+			<img src="img/skin/products/knuckle3.png">
 		</div>
 		<div class="modal__text">
 			<div class="close-container">
@@ -203,17 +222,34 @@
 
 
 
+<!--SVG filter plz ignore ta-->
+<!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svgEffect">
+    <defs>
+      <filter id="shadowed-goo">
+          
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" id="moveblur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feBlend in2="shadow" in="goo" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+      <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+    </defs>
+</svg> -->
+<!--SVG filter plz ignore ta-->
 
 
-
-<script type="text/javascript" src="js/skrollr.js"></script>
 
 <script>
 
 
 
-var s = skrollr.init({    	
-});
 
  
 
@@ -223,15 +259,19 @@ var s = skrollr.init({
 
 
 //MODAL////
+///////////
 var productClicked = 0;
 var owl = $("#slider");
 
 
 $(".product").click(function(){
 	productClicked = $(this).attr('name');
-	$(".products").addClass('blurThis');
+	$("#outer-container").addClass('blurThis');
 
 	$(".modal , .modalCover").attr("id", "show");
+	$(".modalContent").animate({
+		opacity: "1"
+	}, 500)
 
 	// setTimeout(function(){		
 		owl.owlCarousel({
@@ -241,10 +281,22 @@ $(".product").click(function(){
 			});
 	// }, 1000);
 	
-	$('#itemTitle').text(itemPosition[productClicked].title); 
-
-	
+	$('#itemTitle').text(itemPosition[productClicked].title);	
 });
+
+$("#close").click(function(){
+	$(".modalContent").animate({
+		opacity: "0"
+	}, 250)
+	setTimeout(function(){
+		$(".modal , .modalCover").attr("id", "hide");
+		//Need to destroy the carousel or the 'startPosition' will still have the first 'productClicked' value in from whatever ring the user clicked first. This caused the first ring to be displayed no matter what ring you click next. Then you have to remove the classes that owl carousel adds to the DOM.
+		// $('#slider').owlCarousel('destroy');
+		$("#outer-container").removeClass('blurThis');
+		$('#slider').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+		$('#slider').find('.owl-stage-outer').children().unwrap();
+	}, 250)
+}).css('cursor', 'pointer');
 
 
 
@@ -269,43 +321,34 @@ owl.on('changed.owl.carousel', function(event) {
 
 
 
-$("#close").click(function(){
-	
-	$(".modal , .modalCover").attr("id", "hide");
-	//Need to destroy the carousel or the 'startPosition' will still have the first 'productClicked' value in from whatever ring the user clicked first. This caused the first ring to be displayed no matter what ring you click next. Then you have to remove the classes that owl carousel adds to the DOM.
-	// $('#slider').owlCarousel('destroy');
-	$(".products").removeClass('blurThis');
-	$('#slider').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
-	$('#slider').find('.owl-stage-outer').children().unwrap();
-
-}).css('cursor', 'pointer');
 
 
 
+
+
+
+//TITLE//
 
 //Animate letter spacing of title 1 second after page load
-function animateTitle(){
-	 $("#title").animate({letterSpacing: "1px"}, 3000);
-}
-$( document ).ready(function() {
-	setTimeout(animateTitle, 500); 
-});
+// function animateTitle(){
+// 	 $("#title").animate({letterSpacing: "1px"}, 3000);
+// }
+// $( document ).ready(function() {
+// 	setTimeout(animateTitle, 500); 
+// });
 
+// //Reduce the goo effect in time with the letter spacing
+// var svg = document.getElementById("moveblur");
+// var warp = 10;
 
-
-
-//Reduce the goo effect in time with the letter spacing
-var svg = document.getElementById("moveblur");
-var warp = 10;
-
-setInterval (function(){
-	if (warp > 0){
-		warp = warp - 0.05;
-	} 
+// setInterval (function(){
+// 	if (warp > 0){
+// 		warp = warp - 0.05;
+// 	} 
   
-	svg.setAttribute("stdDeviation", warp);
+// 	svg.setAttribute("stdDeviation", warp);
 
-}, 20);
+// }, 20);
 
 
 

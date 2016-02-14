@@ -5,7 +5,8 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'css/home.css' : 'scss/home.scss',
-					'css/skin.css' : 'scss/skin.scss'
+					'css/skin.css' : 'scss/skin.scss',
+					'css/tumblrFeed.css' : 'scss/tumblrFeed.scss'
 				}
 			}
 		},
