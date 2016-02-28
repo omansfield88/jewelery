@@ -1,6 +1,8 @@
 body {
   font-size: 100%;
-  background-color: #070707; }
+  background-image: url("../img/skin/marblebg.png");
+  background-repeat: repeat;
+  background-attachment: fixed; }
 
 * {
   margin: 0;
@@ -8,6 +10,38 @@ body {
 
 body, html {
   height: 100%; }
+
+h2 {
+  color: #BBB;
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: normal; }
+  @media screen and (min-width: 550px) {
+    h2 {
+      font-size: 60px; } }
+  @media screen and (min-width: 750px) {
+    h2 {
+      font-size: 90px; } }
+
+h3 {
+  color: #BBB;
+  font-size: 26px;
+  text-align: center;
+  font-family: "PT Sans Narrow", sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400; }
+
+p {
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #BBB;
+  font-size: 25px; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.75), transparent); }
 
 #outer-container {
   width: 100%;
@@ -32,26 +66,27 @@ nav {
 
 .thesvg--top {
   display: flex;
-  justify-content: center;
-  border-top: 1px solid #fff; }
+  justify-content: center; }
 
 .thesvg--bottom {
   display: flex;
   justify-content: center; }
 
-.showcase {
+.intro {
   background: #101010;
   height: 100%;
-  max-width: 1200px;
-  margin: 0 auto 100px auto;
-  border: 1px solid #bf9567; }
-  @media screen and (min-width: 530px) {
-    .showcase {
+  margin: 0 20px 100px 20px;
+  border: 5px outset #bf9567; }
+  @media screen and (min-width: 550px) {
+    .intro {
       margin: 20px; } }
   @media screen and (min-width: 750px) {
-    .showcase {
-      padding: 0 50px 0 50px; } }
-  .showcase h1 {
+    .intro {
+      width: 80%;
+      max-width: 800px;
+      padding: 0 50px 50px 50px;
+      margin: 0 50px 100px 50px; } }
+  .intro h1 {
     font-family: "Playfair Display", serif;
     color: #BBB;
     display: block;
@@ -61,21 +96,21 @@ nav {
     font-weight: bold;
     letter-spacing: -10px;
     transition: easeIn; }
-    @media screen and (min-width: 530px) {
-      .showcase h1 {
+    @media screen and (min-width: 550px) {
+      .intro h1 {
         font-size: 90px; } }
     @media screen and (min-width: 750px) {
-      .showcase h1 {
+      .intro h1 {
         font-size: 120px; } }
-  .showcase span {
+  .intro span {
     font-size: 95px; }
-    @media screen and (min-width: 530px) {
-      .showcase span {
+    @media screen and (min-width: 550px) {
+      .intro span {
         font-size: 120px; } }
     @media screen and (min-width: 750px) {
-      .showcase span {
+      .intro span {
         font-size: 160px; } }
-  .showcase__firstRow {
+  .intro__firstRow {
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -83,19 +118,15 @@ nav {
     justify-content: center;
     padding: 50px 0 0 0; }
     @media screen and (min-width: 750px) {
-      .showcase__firstRow {
+      .intro__firstRow {
         width: auto; } }
-    .showcase__firstRow__textBox {
+    .intro__firstRow__textBox {
       width: 100%;
       vertical-align: top; }
       @media screen and (min-width: 750px) {
-        .showcase__firstRow__textBox {
+        .intro__firstRow__textBox {
           width: 50%; } }
-      .showcase__firstRow__textBox p {
-        font-family: 'Playfair Display', serif;
-        color: #BBB;
-        font-size: 25px; }
-    .showcase__firstRow__image {
+    .intro__firstRow__image {
       width: 100%;
       margin: 30px 0 0 0;
       box-sizing: border-box;
@@ -103,80 +134,77 @@ nav {
       justify-content: center;
       align-items: center; }
       @media screen and (min-width: 750px) {
-        .showcase__firstRow__image {
+        .intro__firstRow__image {
           width: 50%;
           margin: 0; } }
-      @media screen and (min-width: 1080px) {
-        .showcase__firstRow__image {
+      @media screen and (min-width: 1000px) {
+        .intro__firstRow__image {
           width: 50%; } }
-      .showcase__firstRow__image img {
+      .intro__firstRow__image img {
         width: 60%;
         max-width: 400px;
         max-height: 400px; }
         @media screen and (min-width: 750px) {
-          .showcase__firstRow__image img {
+          .intro__firstRow__image img {
             padding: 0 0 0 40px; } }
-  .showcase__secondRow {
+  .intro__secondRow {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 50px 0 0 0;
     flex-wrap: wrap;
-    flex-direction: column-reverse; }
-    @media screen and (min-width: 530px) {
-      .showcase__secondRow {
+    flex-direction: column-reverse;
+    position: relative; }
+    @media screen and (min-width: 550px) {
+      .intro__secondRow {
         flex-direction: unset; } }
-    .showcase__secondRow__finger {
+    .intro__secondRow__finger {
       width: 100%;
       display: flex;
       justify-content: center;
       margin: 30px 0 0 0; }
-      @media screen and (min-width: 530px) {
-        .showcase__secondRow__finger {
+      @media screen and (min-width: 550px) {
+        .intro__secondRow__finger {
           width: 50%;
           margin: 0; } }
-      .showcase__secondRow__finger img {
+      .intro__secondRow__finger img {
         width: 100%;
         height: 100%; }
-    .showcase__secondRow__girl {
+    .intro__secondRow__girl {
       width: 100%;
       display: flex;
-      justify-content: center; }
-      @media screen and (min-width: 530px) {
-        .showcase__secondRow__girl {
+      justify-content: center;
+      box-sizing: border-box; }
+      @media screen and (min-width: 550px) {
+        .intro__secondRow__girl {
           width: 50%; } }
-      .showcase__secondRow__girl img {
+      .intro__secondRow__girl img {
         margin: 0 auto;
         width: 100%;
         height: 100%; }
 
 .products {
-  margin: 150px 0 0 0; }
-  .products h2 {
-    color: #BBB;
-    font-size: 40px;
-    font-family: "Playfair Display", serif;
-    text-align: center;
-    letter-spacing: 5px;
-    font-weight: normal; }
-    @media screen and (min-width: 530px) {
-      .products h2 {
-        font-size: 60px; } }
-    @media screen and (min-width: 750px) {
-      .products h2 {
-        font-size: 90px; } }
+  max-width: 1200px;
+  margin: 0 auto 100px auto; }
+  @media screen and (min-width: 750px) {
+    .products {
+      margin: 0 20px 100px 20px; } }
+  @media screen and (min-width: 750px) {
+    .products {
+      margin: 0 50px 100px 50px; } }
+  @media screen and (min-width: 1000px) {
+    .products {
+      margin: 0 auto 100px auto; } }
 
 .itemGrid--top {
   display: flex;
   justify-content: space-around;
-  background: #101010;
   margin: 0 0 20px 0;
-  padding: 50px 0 0 0;
-  border-top: 1px solid #BBB; }
+  padding: 50px 0 0 0; }
   @media screen and (min-width: 750px) {
     .itemGrid--top {
       margin: 0 0 30px 0; } }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1000px) {
     .itemGrid--top {
       margin: 0 0 70px 0; } }
   .itemGrid--top__item--first {
@@ -185,7 +213,7 @@ nav {
     align-items: center;
     justify-content: flex-end;
     position: relative; }
-    @media screen and (min-width: 530px) {
+    @media screen and (min-width: 550px) {
       .itemGrid--top__item--first {
         padding: 0 0 0 100px; } }
     .itemGrid--top__item--first img {
@@ -208,7 +236,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start; }
-    @media screen and (min-width: 530px) {
+    @media screen and (min-width: 550px) {
       .itemGrid--top__item--last {
         padding: 0 100px 0 0; } }
     .itemGrid--top__item--last img {
@@ -220,17 +248,16 @@ nav {
 .itemGrid--mid {
   display: flex;
   justify-content: center;
-  background: #101010;
   margin: 0 0 20px 0;
   flex-wrap: wrap; }
-  @media screen and (min-width: 530px) {
+  @media screen and (min-width: 550px) {
     .itemGrid--mid {
       justify-content: space-between;
       flex-wrap: nowrap; } }
   @media screen and (min-width: 750px) {
     .itemGrid--mid {
       margin: 0 0 30px 0; } }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1000px) {
     .itemGrid--mid {
       margin: 0 0 70px 0; } }
   .itemGrid--mid__item--first {
@@ -241,7 +268,7 @@ nav {
     @media screen and (min-width: 380px) {
       .itemGrid--mid__item--first {
         min-width: 160px; } }
-    @media screen and (min-width: 530px) {
+    @media screen and (min-width: 550px) {
       .itemGrid--mid__item--first {
         max-width: 200px;
         min-width: 130px; } }
@@ -258,7 +285,7 @@ nav {
     @media screen and (min-width: 380px) {
       .itemGrid--mid__item--second {
         min-width: 160px; } }
-    @media screen and (min-width: 530px) {
+    @media screen and (min-width: 550px) {
       .itemGrid--mid__item--second {
         max-width: 200px;
         min-width: 130px; } }
@@ -275,7 +302,7 @@ nav {
     @media screen and (min-width: 380px) {
       .itemGrid--mid__item--third {
         min-width: 160px; } }
-    @media screen and (min-width: 530px) {
+    @media screen and (min-width: 550px) {
       .itemGrid--mid__item--third {
         max-width: 200px;
         min-width: 130px; } }
@@ -292,7 +319,7 @@ nav {
     @media screen and (min-width: 380px) {
       .itemGrid--mid__item--fourth {
         min-width: 160px; } }
-    @media screen and (min-width: 530px) {
+    @media screen and (min-width: 550px) {
       .itemGrid--mid__item--fourth {
         max-width: 200px;
         min-width: 130px; } }
@@ -305,14 +332,13 @@ nav {
 .itemGrid--bottom {
   display: flex;
   justify-content: space-around;
-  background: #101010;
   margin: 0 0 70px 0; }
   .itemGrid--bottom__item--first {
     max-width: 200px;
     display: flex;
     align-items: center;
     justify-content: flex-end; }
-    @media screen and (min-width: 530px) {
+    @media screen and (min-width: 550px) {
       .itemGrid--bottom__item--first {
         padding: 0 0 0 100px; } }
     .itemGrid--bottom__item--first img {
@@ -335,7 +361,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start; }
-    @media screen and (min-width: 530px) {
+    @media screen and (min-width: 550px) {
       .itemGrid--bottom__item--last {
         padding: 0 100px 0 0; } }
     .itemGrid--bottom__item--last img {
@@ -343,6 +369,35 @@ nav {
       .itemGrid--bottom__item--last img:hover {
         -webkit-filter: grayscale(80%);
         filter: grayscale(80%); }
+
+.shoots {
+  max-width: 1400px;
+  margin: 0 20px 0 20px; }
+  @media screen and (min-width: 750px) {
+    .shoots {
+      margin: 0 auto; } }
+  .shoots__box {
+    margin: 40px 0 0 0; }
+  .shoots__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+  .shoots img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 5px outset #bf9567;
+    margin: 5px; }
+    @media screen and (min-width: 550px) {
+      .shoots img {
+        width: 48%;
+        max-width: 500px;
+        height: 100%; } }
+    @media screen and (min-width: 1000px) {
+      .shoots img {
+        width: 30%;
+        max-width: 500px;
+        height: 100%; } }
 
 .modalCover {
   position: fixed;
@@ -365,58 +420,92 @@ nav {
   left: 0;
   justify-content: center;
   align-items: center; }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1200px) {
     .modal {
       margin: 0 50px 0 50px; } }
   .modal__box {
     display: block;
-    max-height: 250px;
-    max-width: 250px;
-    border: 1px solid #bf9567;
+    max-height: 280px;
+    max-width: 280px;
+    border: 5px outset #bf9567;
     margin: 0 auto;
-    background: url("../img/skin/modalBG.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url("../img/skin/marblebg.png");
     opacity: 1; }
-    @media screen and (min-width: 530px) {
-      .modal__box {
-        max-height: 400px;
-        max-width: 400px; } }
-    @media screen and (min-width: 750px) {
-      .modal__box {
-        max-height: 400px;
-        max-width: 400px; } }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 550px) {
       .modal__box {
         display: inline-block !important;
-        max-height: 700px;
-        max-width: 700px; } }
+        max-height: 300px;
+        max-width: 300px; } }
+    @media screen and (min-width: 599px) {
+      .modal__box {
+        display: block !important;
+        max-width: 400px;
+        max-height: 400px; } }
+    @media screen and (min-width: 620px) {
+      .modal__box {
+        display: inline-block !important;
+        max-height: 300px;
+        max-width: 300px; } }
+    @media screen and (min-width: 750px) {
+      .modal__box {
+        display: block !important;
+        max-width: 500px;
+        max-height: 500px; } }
+    @media screen and (min-width: 950px) {
+      .modal__box {
+        display: inline-block !important;
+        max-width: 500px;
+        max-height: 500px; } }
+    @media screen and (min-width: 1000px) {
+      .modal__box {
+        display: inline-block !important;
+        max-width: 500px;
+        max-height: 500px; } }
+    @media screen and (min-width: 1200px) {
+      .modal__box {
+        max-width: 700px;
+        max-height: 700px; } }
   .modal__text {
     display: inline-block;
     vertical-align: top;
-    padding: 0 0 0 10px;
-    max-width: 250px; }
-    @media screen and (min-width: 530px) {
+    min-width: 290px; }
+    @media screen and (min-width: 550px) {
       .modal__text {
-        max-width: 400px; } }
+        min-width: 200px; } }
+    @media screen and (min-width: 599px) {
+      .modal__text {
+        min-width: 400px; } }
+    @media screen and (min-width: 620px) {
+      .modal__text {
+        min-width: 300px; } }
     @media screen and (min-width: 750px) {
       .modal__text {
-        max-width: 400px; } }
-    @media screen and (min-width: 1080px) {
+        min-width: 500px; } }
+    @media screen and (min-width: 950px) {
       .modal__text {
-        max-width: 200px; } }
+        min-width: 200px;
+        padding: 0 0 0 10px; } }
+    @media screen and (min-width: 1000px) {
+      .modal__text {
+        min-width: 200px; } }
     .modal__text h3 {
       color: #BBB;
-      font-size: 20px;
-      font-family: "Playfair Display", serif; }
-      @media screen and (min-width: 530px) {
+      font-size: 24px;
+      font-family: "Playfair Display", serif;
+      text-align: left; }
+      @media screen and (min-width: 550px) {
         .modal__text h3 {
-          font-size: 50px;
+          font-size: 30px;
           margin: 0 0 15px 0; } }
+      @media screen and (min-width: 599px) {
+        .modal__text h3 {
+          font-size: 45px; } }
+      @media screen and (min-width: 620px) {
+        .modal__text h3 {
+          font-size: 30px; } }
       @media screen and (min-width: 750px) {
         .modal__text h3 {
-          font-size: 50px; } }
+          font-size: 40px; } }
     .modal__text hr {
       width: 100%;
       border: 0;
@@ -424,56 +513,103 @@ nav {
       background: #BBB; }
     .modal__text span {
       color: #BBB;
-      font-size: 15px;
+      font-size: 18px;
       display: block;
       font-family: "Playfair Display", serif;
       font-style: italic; }
-      @media screen and (min-width: 530px) {
+      @media screen and (min-width: 550px) {
         .modal__text span {
-          font-size: 30px; } }
+          font-size: 25px; } }
+      @media screen and (min-width: 599px) {
+        .modal__text span {
+          font-size: 35px; } }
+      @media screen and (min-width: 750px) {
+        .modal__text span {
+          font-size: 22px; } }
+      @media screen and (min-width: 620px) {
+        .modal__text span {
+          font-size: 25px; } }
     .modal__text p {
       color: #BBB;
-      font-size: 12px;
+      font-size: 15px;
       display: block;
       font-family: "Playfair Display", serif;
       margin: 5px 0 5px 0; }
-      @media screen and (min-width: 530px) {
+      @media screen and (min-width: 550px) {
         .modal__text p {
-          font-size: 20px;
+          font-size: 18px;
           margin: 10px 0 10px 0; } }
-    .modal__text nav {
-      display: none;
-      text-decoration: underline;
-      color: #BBB;
-      font-family: "Roboto", sans-serif;
-      font-size: 24px;
-      padding: 0 0 15px 0; }
+      @media screen and (min-width: 599px) {
+        .modal__text p {
+          font-size: 26px; } }
+      @media screen and (min-width: 550px) {
+        .modal__text p {
+          font-size: 20px; } }
       @media screen and (min-width: 750px) {
+        .modal__text p {
+          font-size: 16px; } }
+      @media screen and (min-width: 620px) {
+        .modal__text p {
+          font-size: 18px; } }
+    .modal__text nav {
+      display: inline-block;
+      color: #BBB;
+      font-family: "PT Sans Narrow", sans-serif;
+      font-size: 24px;
+      border: 1px solid #BBB;
+      width: 50px;
+      height: 50px;
+      padding: 8px 0 5px 10px;
+      box-sizing: border-box;
+      margin: 10px 0 10px 0; }
+      .modal__text nav:hover {
+        background-color: #BBB;
+        color: #000; }
+      @media screen and (min-width: 550px) {
         .modal__text nav {
-          display: inline-block; } }
+          margin: 0 0 10px 0; } }
     .modal__text #nav-next {
       float: right; }
 
 .close-container {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 0 10px 0; }
+  @media screen and (min-width: 550px) {
+    .close-container {
+      display: flex; } }
+
+.close-container-mobile {
   display: flex;
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+  margin: 0 0 10px 0;
+  color: #fff; }
+  @media screen and (min-width: 550px) {
+    .close-container-mobile {
+      display: none; } }
 
-#close {
+.close-btn {
   border: 1px solid #BBB;
   width: 50px;
   height: 50px;
   padding: 8px 5px 5px 5px;
   box-sizing: border-box;
   margin: 10px 0 0 0; }
-  @media screen and (min-width: 1080px) {
-    #close {
+  .close-btn:hover {
+    background-color: #BBB; }
+  .close-btn:hover span {
+    color: #000; }
+  @media screen and (min-width: 1000px) {
+    .close-btn {
       margin: 0; } }
-  #close span {
-    font-family: "Roboto", sans-serif;
+  .close-btn span {
+    font-family: "PT Sans Narrow", sans-serif;
     text-align: center;
-    font-size: 14px;
-    font-style: normal; }
+    font-size: 25px;
+    font-style: normal;
+    display: block; }
 
 .blurThis {
   -webkit-filter: blur(5px);

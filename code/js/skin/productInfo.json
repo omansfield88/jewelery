@@ -1,52 +1,52 @@
 var itemPosition = 
 [
 	{
-		"title" : "Zero",
+		"title" : "Ear Cuff",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
 	},
 	{
-		"title" : "One",
+		"title" : "Ear Cuff",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
 	},
 	{
-		"title" : "Two",
+		"title" : "Ear Cuff",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
 	},
 	{
-		"title" : "Three",
+		"title" : "Thumb Ring",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
 	},
 	{
-		"title" : "Four",
+		"title" : "Knuckle Ring",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
 	},
 	{
-		"title" : "Five",
+		"title" : "Ring",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
 	},
 	{
-		"title" : "Six",
+		"title" : "Ring",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
 	},
 	{
-		"title" : "Seven",
+		"title" : "Ring",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
 	},
 	{
-		"title" : "Eight",
+		"title" : "Ring",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
 	},
 	{
-		"title" : "Nine",
+		"title" : "Ring",
 		"material" : "Rose Gold",
 		"description" : "To be warn balh"
 	}
