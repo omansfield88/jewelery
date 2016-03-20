@@ -1,0 +1,76 @@
+
+h1{
+	font-family: 'Oswald', sans-serif;
+	font-size: 120px;
+	line-height: 130px;
+}
+
+p{
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+    line-height: 42px;
+    width: 500px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+img{
+	width:100%;
+}
+
+#intro{
+	width: 70%;
+	margin: 0 auto;
+}
+
+#box1{
+	width:70%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+
+	img{
+		display:block;
+	}
+
+	&__left{
+		/*display: inline-block;*/
+	}
+
+	&__right{
+		/*display: inline-block;*/
+	}
+}
+
+#box2{
+	width:70%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+
+	img{
+		display:block;
+	}
+}
+
+#A1{
+	
+}
+
+#A2{
+	
+}
+
+#A3{
+	
+}
+
+#A4{
+}
+
+#A5{
+	
+}
+
+#A6{
+}

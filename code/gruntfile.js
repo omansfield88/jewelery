@@ -7,7 +7,8 @@ module.exports = function(grunt) {
 					'css/home.css' : 'scss/home.scss',
 					'css/skin.css' : 'scss/skin.scss',
 					'css/scallys.css' : 'scss/scallys.scss',
-					'css/tumblrFeed.css' : 'scss/tumblrFeed.scss'
+					'css/tumblrFeed.css' : 'scss/tumblrFeed.scss',
+					'css/scallys.css' : 'scss/scallys.scss'
 				}
 			}
 		},
