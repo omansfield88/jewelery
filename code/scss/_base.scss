@@ -1,0 +1,13 @@
+$break-small: 530px;
+$break-medium: 750px;
+$break-large: 1080px;
+
+$logo-font: 'Cinzel', serif;
+$body-font: 'Roboto', sans-serif;
+$title-font: 'Playfair Display', serif;
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url(/fonts/Cinzel-Regular.tff);
+    font-style: normal;
+}

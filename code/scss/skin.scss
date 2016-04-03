@@ -7,7 +7,7 @@ $break-medium-large: 950px;
 $break-large: 1000px;
 $break-xlarge: 1200px;
 
-$title-font: 'Playfair Display', serif;
+$title-font: 'Cinzel', serif;
 $body-font: 'PT Sans Narrow', sans-serif;
 
 $gold-border: 5px outset #bf9567;
@@ -19,9 +19,7 @@ $gold1: #bf9567;
 //////////////
 body{
 	font-size: 100%;
-	background-image: url('../img/skin/marblebg.png');
-	background-repeat: repeat;
-	background-attachment: fixed;
+	background: #000;
 }
 *{
 	margin: 0;
@@ -139,28 +137,24 @@ nav{
 		font-family: $title-font;
 		color: $white;
 		display: block;
-		font-weight: normal;
+		font-weight: lighter;
 		text-align: center;
 		font-size: 100px;
-		font-weight: bold;
-		letter-spacing: -80px;
-		transition: easeIn;
-		-webkit-filter: url(#shadowed-goo);
-		-moz-filter: url(#shadowed-goo);
-        filter: url(#shadowed-goo);	
+		margin: 50px 0;
+		// letter-spacing: -80px;
+		
 
-		@media screen and (min-width: $break-small) {
-			font-size: 200px;
-		}
+		// @media screen and (min-width: $break-small) {
+		// 	font-size: 200px;
+		// }
 
-		@media screen and (min-width: $break-medium) {
-			font-size: 200px;
-		}
+		// @media screen and (min-width: $break-medium) {
+		// 	font-size: 200px;
+		// }
 
-		@media screen and (min-width: $break-large) {
-			font-size: 300px;
-			line-height: 300px;
-		}	
+		// @media screen and (min-width: $break-large) {
+		// 	font-size: 300px;
+		// }	
 
 	}
 
@@ -316,6 +310,9 @@ nav{
 .products{
 	max-width: 1200px;
 	margin: 0 auto 100px auto;
+	background-image: url('../img/skin/marblebg.png');
+	// background-repeat: repeat;
+	// background-attachment: fixed;
 
 
 	@media screen and (min-width: $break-medium) {
@@ -368,6 +365,7 @@ nav{
 			align-items: center;
 			justify-content: flex-end;
 			position: relative;
+			cursor: pointer;
 			
 
 			@media screen and (min-width: $break-small) {
@@ -387,7 +385,8 @@ nav{
 			max-width: 200px;
 			display: flex;
 			align-items: center;
-			justify-content: center;		
+			justify-content: center;
+			cursor: pointer;	
 
 			img{
 				width: 80%;
@@ -403,6 +402,7 @@ nav{
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
+			cursor: pointer;
 
 			@media screen and (min-width: $break-small) {
 				padding: 0 100px 0 0;
@@ -448,6 +448,7 @@ nav{
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			cursor: pointer;
 
 			@media screen and (min-width: $tweak-rings) {
 				min-width: 160px;
@@ -473,6 +474,7 @@ nav{
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			cursor: pointer;
 
 			@media screen and (min-width: $tweak-rings) {
 				min-width: 160px;
@@ -498,6 +500,7 @@ nav{
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			cursor: pointer;
 
 			@media screen and (min-width: $tweak-rings) {
 				min-width: 160px;
@@ -522,6 +525,7 @@ nav{
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			cursor: pointer;
 
 			@media screen and (min-width: $tweak-rings) {
 				min-width: 160px;
@@ -554,7 +558,8 @@ nav{
 			max-width: 200px;			
 			display: flex;
 			align-items: center;
-			justify-content: flex-end;			
+			justify-content: flex-end;
+			cursor: pointer;			
 
 			@media screen and (min-width: $break-small) {
 				padding: 0 0 0 100px;
@@ -574,7 +579,8 @@ nav{
 			max-width: 200px;
 			display: flex;
 			align-items: center;
-			justify-content: center;	
+			justify-content: center;
+			cursor: pointer;	
 
 
 
@@ -592,6 +598,7 @@ nav{
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
+			cursor: pointer;
 
 			@media screen and (min-width: $break-small) {
 				padding: 0 100px 0 0;

@@ -83,22 +83,22 @@ owl.on('changed.owl.carousel', function(event) {
 //TITLE//
 
 //Animate letter spacing of title 1 second after page load
-function animateTitle(){
-	 $("#title").animate({letterSpacing: "-10px"}, 3000);
-}
-$( document ).ready(function() {
-	setTimeout(animateTitle, 500); 
-});
+// function animateTitle(){
+// 	 $("#title").animate({letterSpacing: "-10px"}, 3000);
+// }
+// $( document ).ready(function() {
+// 	setTimeout(animateTitle, 500); 
+// });
 
-//Reduce the goo effect in time with the letter spacing
-var svg = document.getElementById("moveblur");
-var warp = 10;
+// //Reduce the goo effect in time with the letter spacing
+// var svg = document.getElementById("moveblur");
+// var warp = 10;
 
-setInterval (function(){
-	if (warp > 0){
-		warp = warp - 0.05;
-	} 
+// setInterval (function(){
+// 	if (warp > 0){
+// 		warp = warp - 0.05;
+// 	} 
   
-	svg.setAttribute("stdDeviation", warp);
+// 	svg.setAttribute("stdDeviation", warp);
 
-}, 20);
+// }, 20);

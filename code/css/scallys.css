@@ -1,41 +1,66 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 h1 {
   font-family: 'Oswald', sans-serif;
-  font-size: 120px;
-  line-height: 130px; }
+  font-size: 50px;
+  line-height: 50px;
+  margin: 0 0 20px 0; }
+  @media screen and (min-width: 750px) {
+    h1 {
+      font-size: 80px;
+      line-height: 80px; } }
+  @media screen and (min-width: 1080px) {
+    h1 {
+      font-size: 120px;
+      line-height: 130px; } }
 
 p {
   font-family: 'Oswald', sans-serif;
-  font-size: 25px;
-  line-height: 42px;
-  width: 500px;
-  text-transform: uppercase;
-  display: inline-block; }
+  font-size: 18px;
+  line-height: 26px;
+  width: 100%;
+  display: inline-block;
+  padding: 20px 0 0 0;
+  font-weight: 300;
+  vertical-align: top; }
+  @media screen and (min-width: 750px) {
+    p {
+      width: 40%;
+      font-size: 25px;
+      line-height: 30px;
+      padding: 0 20px 0 0; } }
 
 img {
   width: 100%; }
 
 #intro {
-  width: 70%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; }
+
+#box {
+  width: 100%;
   margin: 0 auto; }
-
-#box1 {
-  width: 70%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center; }
-  #box1 img {
+  @media screen and (min-width: 530px) {
+    #box {
+      width: 70%;
+      display: flex;
+      justify-content: center; } }
+  #box img {
     display: block; }
-  #box1__left {
-    /*display: inline-block;*/ }
-  #box1__right {
-    /*display: inline-block;*/ }
-
-#box2 {
-  width: 70%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center; }
-  #box2 img {
-    display: block; }
+  #box__left {
+    display: block;
+    width: 100%; }
+    @media screen and (min-width: 530px) {
+      #box__left {
+        width: 50%; } }
+  #box__right {
+    display: block;
+    width: 100%; }
+    @media screen and (min-width: 530px) {
+      #box__right {
+        width: 50%; } }
 
 /*# sourceMappingURL=scallys.css.map */

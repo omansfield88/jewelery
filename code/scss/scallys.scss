@@ -1,17 +1,50 @@
+$break-small: 530px;
+$break-medium: 750px;
+$break-large: 1080px;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
 
 h1{
 	font-family: 'Oswald', sans-serif;
-	font-size: 120px;
-	line-height: 130px;
+	font-size: 50px;
+	line-height: 50px;
+	margin: 0 0 20px 0;
+	
+
+	@media screen and (min-width: $break-medium) {
+		font-size: 80px;
+		line-height: 80px;
+		
+	}
+
+	@media screen and (min-width: $break-large) {
+		font-size: 120px;
+		line-height: 130px;
+		
+	}
+
 }
 
 p{
 	font-family: 'Oswald', sans-serif;
-	font-size: 25px;
-    line-height: 42px;
-    width: 500px;
-    text-transform: uppercase;
+	font-size: 18px;
+    line-height: 26px;
+    width: 100%;
     display: inline-block;
+    padding: 20px 0 0 0;   
+    font-weight: 300;
+    vertical-align: top;
+
+    @media screen and (min-width: $break-medium) {
+		width: 40%;
+		font-size: 25px;
+		line-height: 30px;
+		padding: 0 20px 0 0;
+	}
 }
 
 img{
@@ -19,39 +52,51 @@ img{
 }
 
 #intro{
-	width: 70%;
-	margin: 0 auto;
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+
+	@media screen and (min-width: $break-medium) {
+		
+	}
 }
 
-#box1{
-	width:70%;
+#box{
+	width:100%;
 	margin: 0 auto;
-	display: flex;
-	justify-content: center;
+	
+
+	
+
+	@media screen and (min-width: $break-small) {
+		width: 70%;
+		display: flex;
+		justify-content: center;
+	}
 
 	img{
 		display:block;
 	}
 
 	&__left{
-		/*display: inline-block;*/
+		display: block;
+		width: 100%;
+
+		@media screen and (min-width: $break-small) {
+			width: 50%;
+		}
 	}
 
 	&__right{
-		/*display: inline-block;*/
+		display: block;
+		width: 100%;
+
+		@media screen and (min-width: $break-small) {
+			width: 50%;
+		}
 	}
 }
 
-#box2{
-	width:70%;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-
-	img{
-		display:block;
-	}
-}
 
 #A1{
 	

@@ -1,8 +1,6 @@
 body {
   font-size: 100%;
-  background-image: url("../img/skin/marblebg.png");
-  background-repeat: repeat;
-  background-attachment: fixed; }
+  background: #000; }
 
 * {
   margin: 0;
@@ -14,7 +12,7 @@ body, html {
 h2 {
   color: #BBB;
   font-size: 40px;
-  font-family: "Playfair Display", serif;
+  font-family: "Cinzel", serif;
   text-align: center;
   letter-spacing: 5px;
   font-weight: normal; }
@@ -54,7 +52,7 @@ nav {
   justify-content: center;
   margin: 20px 0 20px 0; }
   nav a {
-    font-family: "Playfair Display", serif;
+    font-family: "Cinzel", serif;
     color: #fff;
     font-size: 40px;
     text-align: center;
@@ -89,28 +87,13 @@ nav {
       padding: 0 50px 50px 50px;
       margin: 20px 50px 100px 50px; } }
   .intro h1 {
-    font-family: "Playfair Display", serif;
+    font-family: "Cinzel", serif;
     color: #BBB;
     display: block;
-    font-weight: normal;
+    font-weight: lighter;
     text-align: center;
     font-size: 100px;
-    font-weight: bold;
-    letter-spacing: -80px;
-    transition: easeIn;
-    -webkit-filter: url(#shadowed-goo);
-    -moz-filter: url(#shadowed-goo);
-    filter: url(#shadowed-goo); }
-    @media screen and (min-width: 550px) {
-      .intro h1 {
-        font-size: 200px; } }
-    @media screen and (min-width: 750px) {
-      .intro h1 {
-        font-size: 200px; } }
-    @media screen and (min-width: 1000px) {
-      .intro h1 {
-        font-size: 300px;
-        line-height: 300px; } }
+    margin: 50px 0; }
   .intro span {
     font-size: 95px; }
     @media screen and (min-width: 550px) {
@@ -194,7 +177,8 @@ nav {
 
 .products {
   max-width: 1200px;
-  margin: 0 auto 100px auto; }
+  margin: 0 auto 100px auto;
+  background-image: url("../img/skin/marblebg.png"); }
   @media screen and (min-width: 750px) {
     .products {
       margin: 0 20px 100px 20px; } }
@@ -221,7 +205,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     @media screen and (min-width: 550px) {
       .itemGrid--top__item--first {
         padding: 0 0 0 100px; } }
@@ -234,7 +219,8 @@ nav {
     max-width: 200px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    cursor: pointer; }
     .itemGrid--top__item img {
       width: 80%; }
       .itemGrid--top__item img:hover {
@@ -244,7 +230,8 @@ nav {
     max-width: 200px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    cursor: pointer; }
     @media screen and (min-width: 550px) {
       .itemGrid--top__item--last {
         padding: 0 100px 0 0; } }
@@ -277,7 +264,8 @@ nav {
     max-width: 120px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    cursor: pointer; }
     @media screen and (min-width: 380px) {
       .itemGrid--mid__item--first {
         min-width: 160px; } }
@@ -294,7 +282,8 @@ nav {
     max-width: 120px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    cursor: pointer; }
     @media screen and (min-width: 380px) {
       .itemGrid--mid__item--second {
         min-width: 160px; } }
@@ -311,7 +300,8 @@ nav {
     max-width: 120px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    cursor: pointer; }
     @media screen and (min-width: 380px) {
       .itemGrid--mid__item--third {
         min-width: 160px; } }
@@ -328,7 +318,8 @@ nav {
     max-width: 120px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    cursor: pointer; }
     @media screen and (min-width: 380px) {
       .itemGrid--mid__item--fourth {
         min-width: 160px; } }
@@ -350,7 +341,8 @@ nav {
     max-width: 200px;
     display: flex;
     align-items: center;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    cursor: pointer; }
     @media screen and (min-width: 550px) {
       .itemGrid--bottom__item--first {
         padding: 0 0 0 100px; } }
@@ -363,7 +355,8 @@ nav {
     max-width: 200px;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    cursor: pointer; }
     .itemGrid--bottom__item img {
       width: 80%; }
       .itemGrid--bottom__item img:hover {
@@ -373,7 +366,8 @@ nav {
     max-width: 200px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    cursor: pointer; }
     @media screen and (min-width: 550px) {
       .itemGrid--bottom__item--last {
         padding: 0 100px 0 0; } }
@@ -409,7 +403,7 @@ nav {
       text-align: center; }
     .shoots__text span {
       display: block;
-      font-family: "Playfair Display", serif;
+      font-family: "Cinzel", serif;
       font-size: 30px;
       color: #BBB;
       text-align: center;
@@ -529,7 +523,7 @@ nav {
     .modal__text h3 {
       color: #BBB;
       font-size: 24px;
-      font-family: "Playfair Display", serif;
+      font-family: "Cinzel", serif;
       text-align: left; }
       @media screen and (min-width: 550px) {
         .modal__text h3 {
@@ -553,7 +547,7 @@ nav {
       color: #BBB;
       font-size: 18px;
       display: block;
-      font-family: "Playfair Display", serif;
+      font-family: "Cinzel", serif;
       font-style: italic; }
       @media screen and (min-width: 550px) {
         .modal__text span {
@@ -571,7 +565,7 @@ nav {
       color: #BBB;
       font-size: 15px;
       display: block;
-      font-family: "Playfair Display", serif;
+      font-family: "Cinzel", serif;
       margin: 5px 0 5px 0; }
       @media screen and (min-width: 550px) {
         .modal__text p {
